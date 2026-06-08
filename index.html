@@ -3,19 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>PTS Touch 3 Route</title>
+<title>PTS Outreach Route</title>
 <style>
   * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
   body { font-family:-apple-system, 'DM Sans', Arial, sans-serif; background:#F5F3EE; color:#080808; padding-bottom:40px; }
   header { background:#080808; color:#F5F3EE; padding:18px 16px 14px; position:sticky; top:0; z-index:10; }
   header h1 { font-size:18px; font-weight:700; }
   header p { font-size:12px; color:#5AB935; margin-top:2px; }
-  .daybar { display:flex; gap:8px; padding:12px 16px 4px; }
-  .daybar a { flex:1; text-align:center; padding:10px 0; border-radius:8px; font-size:14px; font-weight:700; text-decoration:none; background:#EFE9DA; color:#080808; border:1px solid #d8d2c2; }
-  .legbtn { display:block; margin:10px 16px 0; background:#3B6D11; color:#fff; text-align:center; padding:13px; border-radius:10px; font-size:15px; font-weight:700; text-decoration:none; }
-  .legbtn span { font-weight:400; font-size:12px; display:block; color:#d7ecc2; }
-  h2.day { padding:22px 16px 4px; font-size:17px; }
-  h2.day small { display:block; font-size:12px; font-weight:400; color:#555; margin-top:2px; }
+  .start { background:#3B6D11; color:#fff; margin:12px; border-radius:12px; padding:14px; }
+  .start h2 { font-size:16px; font-weight:700; }
+  .start .addr { font-size:12px; color:#dceccb; margin-top:2px; }
+  .start a { display:block; margin-top:10px; background:#fff; color:#3B6D11; text-align:center; padding:11px; border-radius:9px; font-size:14px; font-weight:700; text-decoration:none; }
+  .legbtn { display:block; margin:8px 12px 0; background:#EFE9DA; color:#080808; border:1px solid #d8d2c2; text-align:center; padding:11px; border-radius:10px; font-size:13px; font-weight:700; text-decoration:none; }
   .stop { background:#fff; margin:10px 12px; border-radius:12px; border:1px solid #e2ddd0; padding:12px 12px 10px; }
   .stop.key { border:2px solid #5AB935; }
   .tag { display:inline-block; font-size:10px; font-weight:700; color:#fff; background:#3B6D11; border-radius:4px; padding:2px 6px; margin-left:6px; vertical-align:middle; }
@@ -24,7 +23,9 @@
   .office { font-size:15px; font-weight:700; line-height:1.25; }
   .addr { font-size:12px; color:#555; margin-top:2px; }
   .agents { margin:8px 0 2px; }
-  .agent { display:flex; justify-content:space-between; align-items:center; padding:7px 0; border-top:1px solid #f0ece1; font-size:13px; }
+  .agent { display:flex; justify-content:space-between; align-items:center; padding:7px 0; border-top:1px solid #f0ece1; font-size:13px; gap:8px; }
+  .agent .who { flex:1; }
+  .agent .vol { font-size:11px; color:#3B6D11; font-weight:700; }
   .agent a { color:#3B6D11; font-weight:700; text-decoration:none; font-size:13px; padding:6px 10px; background:#eef5e4; border-radius:8px; white-space:nowrap; }
   .flyers { font-size:12px; font-weight:700; color:#3B6D11; margin-top:6px; }
   .note { font-size:12px; background:#FAF7F2; border-left:3px solid #5AB935; padding:6px 8px; margin-top:8px; color:#333; }
@@ -36,241 +37,164 @@
   .fieldnote { width:100%; min-height:44px; margin-top:8px; padding:8px 10px; border:1px solid #d8d2c2; border-radius:8px; font-family:inherit; font-size:13px; background:#FAF7F2; color:#080808; resize:vertical; }
   .copybtn { display:block; margin:18px 16px 0; width:calc(100% - 32px); background:#3B6D11; color:#fff; border:none; padding:14px; border-radius:10px; font-size:15px; font-weight:700; }
   .footer { margin:24px 16px 10px; font-size:12px; color:#555; line-height:1.5; }
+  .donestop { background:#EFE9DA; margin:10px 12px; border-radius:12px; padding:10px 12px; font-size:13px; color:#555; }
 </style>
 </head>
 <body>
-
 <header>
-  <h1>PTS Touch 3 Office Visits</h1>
-  <p>One call. One team. Done right. &nbsp;|&nbsp; 57 flyers: 1 per agent + 1 per front desk</p>
+  <h1>PTS Outreach Route &mdash; Optimized Loop</h1>
+  <p>One call. One team. Done right. &nbsp;|&nbsp; 12 offices &middot; 19 agents &middot; 31 flyers</p>
 </header>
 
-<div class="daybar">
-  <a href="#day1">Day 1 &middot; Thu</a>
-  <a href="#day2">Day 2 &middot; Fri</a>
+<div class="start">
+  <h2>START: Crumbl Cookies (pick up cookies)</h2>
+  <div class="addr">500 SE Walton Blvd, Ste 10, Bentonville, AR 72712</div>
+  <a href="https://maps.apple.com/?daddr=500+SE+Walton+Blvd%2C+Ste+10%2C+Bentonville%2C+AR+72712&dirflg=d">&#63743; Navigate to Crumbl</a>
 </div>
 
-<h2 class="day" id="day1">Day 1 — Thursday June 4 <small>Lowell &rarr; Rogers &rarr; Bentonville &middot; 11 stops &middot; 20 agent flyers + 11 front desk = 31</small></h2>
+<a class="legbtn" href="https://www.google.com/maps/dir/?api=1&destination=3113+N+Walton+Blvd%2C+Bentonville%2C+AR+72712&waypoints=800+SE+Walton+Blvd%2C+Suite+2%2C+Bentonville%2C+AR+72712%7C609+SW+8th+St%2C+Suite+621%2C+Bentonville%2C+AR+72712%7C1011+N+Walton+Blvd%2C+Bentonville%2C+AR+72712%7C1111+N+Walton+Blvd%2C+Bentonville%2C+AR+72712&origin=500+SE+Walton+Blvd%2C+Ste+10%2C+Bentonville%2C+AR+72712">Full route Leg A in Google Maps (Crumbl &rarr; stops 1&ndash;5, Bentonville)</a>
+<a class="legbtn" href="https://www.google.com/maps/dir/?api=1&destination=217+S+Gentry+Blvd%2C+Gentry%2C+AR+72734&waypoints=110+N+34th+St%2C+Rogers%2C+AR+72756%7C5100+W+Park+Ave%2C+Suite+A122%2C+Rogers%2C+AR+72758%7C5214+Village+Parkway%2C+Suite+201%2C+Rogers%2C+AR+72758%7C4617+S+47th+St%2C+Rogers%2C+AR+72758%7C2090+W+Pleasant+Grove+Rd%2C+Rogers%2C+AR+72758%7C6077+SW+Regional+Airport+Blvd%2C+No.+1%2C+Bentonville%2C+AR+72713&origin=3113+N+Walton+Blvd%2C+Bentonville%2C+AR+72712">Full route Leg B in Google Maps (stops 6&ndash;12, Rogers + west)</a>
 
-<a class="legbtn" href="https://www.google.com/maps/dir/?api=1&destination=809+S+52nd+St,+Rogers,+AR+72758&waypoints=106+Parkwood+St,+Lowell,+AR+72745%7C3003+W+Walnut+St,+Rogers,+AR+72756%7C3801+W+Walnut+St,+Rogers,+AR+72756%7C5247+W+Metro+Park+Crossing,+Rogers,+AR+72758%7C2225+S+Bellview+Rd,+Rogers,+AR+72758">Start Leg A: Stops 1&ndash;6 <span>Lowell + Rogers, optional: full route in Google Maps</span></a>
-<a class="legbtn" href="https://www.google.com/maps/dir/?api=1&destination=3105+NE+11th+St,+Bentonville,+AR+72712&waypoints=3712+S+Pinnacle+Hills+Pkwy,+Rogers,+AR+72758%7C5214+Village+Parkway,+Rogers,+AR+72758%7C3113+N+Walton+Blvd,+Bentonville,+AR+72712%7C3301+S+Walton+Blvd,+Bentonville,+AR+72712">Start Leg B: Stops 7&ndash;11 <span>Pinnacle Hills + Bentonville, optional: full route in Google Maps</span></a>
-
-<div class="stop">
-  <div class="stoptop"><div class="num">1</div><div><div class="office">Gibson Real Estate</div><div class="addr">106 Parkwood St, Suite A, Lowell</div></div></div>
-  <div class="agents"><div class="agent"><span>Jared Smith (#24)</span><a href="tel:4793724705">Call</a></div></div>
-  <div class="flyers">2 flyers: 1 agent + 1 front desk</div>
-  <textarea class="fieldnote" placeholder="Notes after the stop...">6/4: Met David Williams, co-owner. Invited PTS to speak at his team meeting Thu June 11, 10am.</textarea>
-  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=106+Parkwood+St,+Lowell,+AR+72745&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=106+Parkwood+St,+Lowell,+AR+72745">Google</a><label class="done"><input type="checkbox" checked>Done</label></div>
-</div>
+<div class="donestop">Already done (June 4): KW Market Pro Branch, Bentonville. Jennifer Castro, Krystal Tronzano, Harris Group. Not on this route.</div>
 
 <div class="stop">
-  <div class="stoptop"><div class="num">2</div><div><div class="office">Crye-Leike REALTORS</div><div class="addr">3003 W Walnut St, Rogers</div></div></div>
-  <div class="agents"><div class="agent"><span>Doug Gibson (#9)</span><a href="tel:4798712334">Call</a></div></div>
-  <div class="flyers">2 flyers: 1 agent + 1 front desk</div>
-  <textarea class="fieldnote" placeholder="Notes after the stop...">6/4: Front desk only. She looked at the flyer, interested but didn't give much.</textarea>
-  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=3003+W+Walnut+St,+Rogers,+AR+72756&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=3003+W+Walnut+St,+Rogers,+AR+72756">Google</a><label class="done"><input type="checkbox" checked>Done</label></div>
-</div>
-
-<div class="stop">
-  <div class="stoptop"><div class="num">3</div><div><div class="office">Lindsey &amp; Associates</div><div class="addr">3801 W Walnut St, Rogers</div></div></div>
+  <div class="stoptop"><div class="num">1</div><div><div class="office">Crye-Leike Bentonville</div><div class="addr">800 SE Walton Blvd, Suite 2, Bentonville, AR 72712</div></div></div>
   <div class="agents">
-    <div class="agent"><span>Somer Adams (#25)</span><a href="tel:4796362200">Call</a></div>
-    <div class="agent"><span>Johnson Shapley Group (#28)</span><a href="tel:4796362200">Call</a></div>
-    <div class="agent"><span>Mandy Nickell (#41)</span><a href="tel:4793377629">Call</a></div>
+    <div class="agent"><span class="who">Annette Gore Team <span class="vol">#70 &middot; $7.17M</span></span><a href="tel:4796405087">Call</a></div>
+    <div class="agent"><span class="who">Jean Lance <span class="vol">#88 &middot; $6.09M</span></span><a href="tel:4795314582">Call</a></div>
   </div>
-  <div class="flyers">4 flyers: 3 agents + 1 front desk</div>
+  <div class="flyers">3 flyers: 2 agent + 1 front desk &middot; +1 cookie box</div>
+  <div class="note">Address resolved by web: Joe&#x27;s sheet said 3003 W Walnut, that&#x27;s the Rogers office. This is the real Bentonville one, two doors from Crumbl. Confirm with Joe.</div>
   <textarea class="fieldnote" placeholder="Notes after the stop..."></textarea>
-  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=3801+W+Walnut+St,+Rogers,+AR+72756&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=3801+W+Walnut+St,+Rogers,+AR+72756">Google</a><label class="done"><input type="checkbox">Done</label></div>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=800+SE+Walton+Blvd%2C+Suite+2%2C+Bentonville%2C+AR+72712&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=800+SE+Walton+Blvd%2C+Suite+2%2C+Bentonville%2C+AR+72712">Google</a><label class="done"><input type="checkbox">Done</label></div>
 </div>
 
 <div class="stop">
-  <div class="stoptop"><div class="num">4</div><div><div class="office">Limbird Real Estate Group / PLACE</div><div class="addr">5247 W Metro Park Crossing, Rogers</div></div></div>
-  <div class="agents"><div class="agent"><span>The Limbird Team (#4)</span><a href="tel:8557557653">Call</a></div></div>
-  <div class="flyers">2 flyers: 1 agent + 1 front desk</div>
-  <textarea class="fieldnote" placeholder="Notes after the stop...">6/4: Team loved it. Heather is the boss, made a great impression on her.</textarea>
-  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=5247+W+Metro+Park+Crossing,+Rogers,+AR+72758&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=5247+W+Metro+Park+Crossing,+Rogers,+AR+72758">Google</a><label class="done"><input type="checkbox" checked>Done</label></div>
-</div>
-
-<div class="stop">
-  <div class="stoptop"><div class="num">5</div><div><div class="office">Curtis Realty Group</div><div class="addr">2225 S Bellview Rd, Suite 210, Rogers</div></div></div>
-  <div class="agents"><div class="agent"><span>Curtis Realty Group (#21)</span><a href="tel:4792503105">Call</a></div></div>
-  <div class="flyers">2 flyers: 1 agent + 1 front desk</div>
-  <textarea class="fieldnote" placeholder="Notes after the stop...">6/4: Nobody there, slid 2 flyers under main office door. NOTE: shares office space with a KW group, front desk may cover both.</textarea>
-  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=2225+S+Bellview+Rd,+Rogers,+AR+72758&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=2225+S+Bellview+Rd,+Rogers,+AR+72758">Google</a><label class="done"><input type="checkbox" checked>Done</label></div>
-</div>
-
-<div class="stop">
-  <div class="stoptop"><div class="num">6</div><div><div class="office">Coldwell Banker HMF &mdash; Rogers</div><div class="addr">809 S 52nd St, Rogers</div></div></div>
-  <div class="agents"><div class="agent"><span>Meza Harris &amp; Aricka Finger Team (#10)</span><a href="tel:4796960600">Call</a></div></div>
-  <div class="flyers">2 flyers: 1 agent + 1 front desk</div>
-  <textarea class="fieldnote" placeholder="Notes after the stop..."></textarea>
-  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=809+S+52nd+St,+Rogers,+AR+72758&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=809+S+52nd+St,+Rogers,+AR+72758">Google</a><label class="done"><input type="checkbox">Done</label></div>
-</div>
-
-<div class="stop">
-  <div class="stoptop"><div class="num">7</div><div><div class="office">Portfolio Sotheby's International Realty</div><div class="addr">3712 S Pinnacle Hills Pkwy, Suite 101, Rogers</div></div></div>
-  <div class="agents"><div class="agent"><span>Dee Rodes (#40)</span><a href="tel:4799366073">Call</a></div></div>
-  <div class="flyers">2 flyers: 1 agent + 1 front desk</div>
-  <textarea class="fieldnote" placeholder="Notes after the stop...">6/4: Met Dee Rodes. Seemed interested, eyes widened at the Chani mention. Very nice so hard to read.</textarea>
-  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=3712+S+Pinnacle+Hills+Pkwy,+Rogers,+AR+72758&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=3712+S+Pinnacle+Hills+Pkwy,+Rogers,+AR+72758">Google</a><label class="done"><input type="checkbox" checked>Done</label></div>
-</div>
-
-<div class="stop">
-  <div class="stoptop"><div class="num">8</div><div><div class="office">The Sudar Group</div><div class="addr">5214 Village Parkway, Suite 201, Rogers</div></div></div>
-  <div class="agents"><div class="agent"><span>Lily Dighero (#17)</span><a href="tel:4797997842">Call</a></div></div>
-  <div class="flyers">2 flyers: 1 agent + 1 front desk</div>
-  <div class="note">Address web-sourced, Joe had it TBD. Call Lily ahead to confirm before driving.</div>
-  <textarea class="fieldnote" placeholder="Notes after the stop..."></textarea>
-  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=5214+Village+Parkway,+Rogers,+AR+72758&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=5214+Village+Parkway,+Rogers,+AR+72758">Google</a><label class="done"><input type="checkbox">Done</label></div>
-</div>
-
-<div class="stop">
-  <div class="stoptop"><div class="num">9</div><div><div class="office">Coldwell Banker HMF &mdash; Bentonville</div><div class="addr">3113 N Walton Blvd, Bentonville</div></div></div>
+  <div class="stoptop"><div class="num">2</div><div><div class="office">Soho NWA</div><div class="addr">609 SW 8th St, Suite 621, Bentonville, AR 72712</div></div></div>
   <div class="agents">
-    <div class="agent"><span>Jan Holland (#26)</span><a href="tel:4796445676">Call</a></div>
-    <div class="agent"><span>Kate Cox (#39)</span><a href="tel:4797999628">Call</a></div>
+    <div class="agent"><span class="who">Soho NWA team <span class="vol">#117 &middot; $4.90M</span></span><a href="tel:4792000031">Call</a></div>
   </div>
-  <div class="flyers">3 flyers: 2 agents + 1 front desk</div>
+  <div class="flyers">2 flyers: 1 agent + 1 front desk &middot; +1 cookie box</div>
   <textarea class="fieldnote" placeholder="Notes after the stop..."></textarea>
-  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=3113+N+Walton+Blvd,+Bentonville,+AR+72712&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=3113+N+Walton+Blvd,+Bentonville,+AR+72712">Google</a><label class="done"><input type="checkbox">Done</label></div>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=609+SW+8th+St%2C+Suite+621%2C+Bentonville%2C+AR+72712&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=609+SW+8th+St%2C+Suite+621%2C+Bentonville%2C+AR+72712">Google</a><label class="done"><input type="checkbox">Done</label></div>
 </div>
 
 <div class="stop">
-  <div class="stoptop"><div class="num">10</div><div><div class="office">Weichert REALTORS &mdash; The Griffin Company</div><div class="addr">3301 S Walton Blvd, Suite 1, Bentonville</div></div></div>
-  <div class="agents"><div class="agent"><span>Heather Campbell (#7)</span><a href="tel:4793663026">Call</a></div></div>
-  <div class="flyers">2 flyers: 1 agent + 1 front desk</div>
-  <textarea class="fieldnote" placeholder="Notes after the stop...">6/4: Dropped 2 flyers, one for Heather Campbell, one for office. Front desk not super interested.</textarea>
-  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=3301+S+Walton+Blvd,+Bentonville,+AR+72712&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=3301+S+Walton+Blvd,+Bentonville,+AR+72712">Google</a><label class="done"><input type="checkbox" checked>Done</label></div>
+  <div class="stoptop"><div class="num">3</div><div><div class="office">Burnett RE / ConnectRealty</div><div class="addr">1011 N Walton Blvd, Bentonville, AR 72712</div></div></div>
+  <div class="agents">
+    <div class="agent"><span class="who">Cody Burnett <span class="vol">#72 &middot; $7.08M</span></span><a href="tel:4796408375">Call</a></div>
+  </div>
+  <div class="flyers">2 flyers: 1 agent + 1 front desk &middot; +1 cookie box</div>
+  <textarea class="fieldnote" placeholder="Notes after the stop..."></textarea>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=1011+N+Walton+Blvd%2C+Bentonville%2C+AR+72712&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=1011+N+Walton+Blvd%2C+Bentonville%2C+AR+72712">Google</a><label class="done"><input type="checkbox">Done</label></div>
+</div>
+
+<div class="stop">
+  <div class="stoptop"><div class="num">4</div><div><div class="office">NWA Residential RE</div><div class="addr">1111 N Walton Blvd, Bentonville, AR 72712</div></div></div>
+  <div class="agents">
+    <div class="agent"><span class="who">Danielle Hefley <span class="vol">#50 &middot; $9.88M</span></span><a href="tel:4795444779">Call</a></div>
+  </div>
+  <div class="flyers">2 flyers: 1 agent + 1 front desk &middot; +1 cookie box</div>
+  <textarea class="fieldnote" placeholder="Notes after the stop..."></textarea>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=1111+N+Walton+Blvd%2C+Bentonville%2C+AR+72712&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=1111+N+Walton+Blvd%2C+Bentonville%2C+AR+72712">Google</a><label class="done"><input type="checkbox">Done</label></div>
 </div>
 
 <div class="stop key">
-  <div class="stoptop"><div class="num">11</div><div><div class="office">Keller Williams Market Pro Realty <span class="tag">BIG STOP</span></div><div class="addr">3105 NE 11th St, Suite 5, Bentonville</div></div></div>
+  <div class="stoptop"><div class="num">5</div><div><div class="office">Coldwell Banker HMF - Bentonville</div><div class="addr">3113 N Walton Blvd, Bentonville, AR 72712</div></div></div>
   <div class="agents">
-    <div class="agent"><span>Joseph Hayes Associates (#11)</span><a href="tel:4798718108">Call</a></div>
-    <div class="agent"><span>The Duley Group (#13)</span><a href="tel:4796164663">Call</a></div>
-    <div class="agent"><span>The EJ Johnson Group (#18)</span><a href="tel:4798711030">Call</a></div>
-    <div class="agent"><span>Lighthouse Group NWA (#27)</span><a href="tel:4797177710">Call</a></div>
-    <div class="agent"><span>Cammi Hevener (#33)</span><a href="tel:4795243123">Call</a></div>
-    <div class="agent"><span>Gleghorn Team (#34)</span><a href="tel:4796333077">Call</a></div>
-    <div class="agent"><span>Motus Group (#36)</span><a href="tel:4795951000">Call</a></div>
+    <div class="agent"><span class="who">Tiffany Cox <span class="vol">#43 &middot; $12.01M</span></span><a href="tel:4798770259">Call</a></div>
+    <div class="agent"><span class="who">Sheryl Carman <span class="vol">#113 &middot; $5.03M</span></span><a href="tel:4795310901">Call</a></div>
   </div>
-  <div class="flyers">8 flyers: 7 agents + 1 front desk</div>
-  <div class="note">7 agents here. Ask front desk to put one flyer in each team's box. Worth extra time with the receptionist.</div>
+  <div class="flyers">3 flyers: 2 agent + 1 front desk &middot; +1 cookie box</div>
+  <div class="note">Different agents than Chanika&#x27;s pipeline (she has Meza Harris, Aricka Finger, Kate Cox). No conflict, Joe deconflicted it.</div>
   <textarea class="fieldnote" placeholder="Notes after the stop..."></textarea>
-  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=3105+NE+11th+St,+Bentonville,+AR+72712&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=3105+NE+11th+St,+Bentonville,+AR+72712">Google</a><label class="done"><input type="checkbox">Done</label></div>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=3113+N+Walton+Blvd%2C+Bentonville%2C+AR+72712&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=3113+N+Walton+Blvd%2C+Bentonville%2C+AR+72712">Google</a><label class="done"><input type="checkbox">Done</label></div>
 </div>
 
-<h2 class="day" id="day2">Day 2 — Friday June 5 <small>Bentonville &rarr; Springdale &rarr; Fayetteville &middot; 11 stops &middot; 15 agent flyers + 11 front desk = 26</small></h2>
-
-<a class="legbtn" href="https://www.google.com/maps/dir/?api=1&destination=1803+SW+Regional+Airport+Blvd,+Bentonville,+AR+72712&waypoints=3103+SE+Moberly+Ln,+Bentonville,+AR+72712%7C523+SE+6th+St,+Bentonville,+AR+72712%7C437+SW+B+St,+Bentonville,+AR+72712%7C609+SW+8th+St,+Bentonville,+AR+72712%7C1401+SW+14th+St,+Bentonville,+AR+72712">Start Leg A: Stops 12&ndash;17 <span>Bentonville Central + SW, optional: full route in Google Maps</span></a>
-<a class="legbtn" href="https://www.google.com/maps/dir/?api=1&destination=3589+N+College+Ave,+Fayetteville,+AR+72703&waypoints=1202+McClain+Rd,+Bentonville,+AR+72712%7C241+S+Elm+Springs+Rd,+Springdale,+AR+72762%7C4024+Wagon+Wheel+Rd,+Springdale,+AR+72762%7C4102+N+Mall+Ave,+Fayetteville,+AR+72703">Start Leg B: Stops 18&ndash;22 <span>Real Broker + Springdale + Fayetteville, optional: full route in Google Maps</span></a>
+<div class="stop">
+  <div class="stoptop"><div class="num">6</div><div><div class="office">eXp Realty NWA</div><div class="addr">110 N 34th St, Rogers, AR 72756</div></div></div>
+  <div class="agents">
+    <div class="agent"><span class="who">Jose Esparza <span class="vol">#83 &middot; $6.36M</span></span><a href="tel:4797218847">Call</a></div>
+  </div>
+  <div class="flyers">2 flyers: 1 agent + 1 front desk &middot; +1 cookie box</div>
+  <textarea class="fieldnote" placeholder="Notes after the stop..."></textarea>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=110+N+34th+St%2C+Rogers%2C+AR+72756&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=110+N+34th+St%2C+Rogers%2C+AR+72756">Google</a><label class="done"><input type="checkbox">Done</label></div>
+</div>
 
 <div class="stop">
-  <div class="stoptop"><div class="num">12</div><div><div class="office">RE/MAX Real Estate Results</div><div class="addr">3103 SE Moberly Ln, Bentonville</div></div></div>
+  <div class="stoptop"><div class="num">7</div><div><div class="office">Collier &amp; Associates</div><div class="addr">5100 W Park Ave, Suite A122, Rogers, AR 72758</div></div></div>
   <div class="agents">
-    <div class="agent"><span>Koenigseder Realty Group (#22)</span><a href="tel:4796198309">Call</a></div>
-    <div class="agent"><span>Michael Hodges (#29)</span><a href="tel:4792719595">Call</a></div>
+    <div class="agent"><span class="who">Matthew Dickhut <span class="vol">#60 &middot; $8.29M</span></span><a href="tel:4797219751">Call</a></div>
+    <div class="agent"><span class="who">Kelley Humbard <span class="vol">#106 &middot; $5.29M</span></span><a href="tel:4792282996">Call</a></div>
+    <div class="agent"><span class="who">Phillip Shepard <span class="vol">#125 &middot; $4.51M</span></span><a href="tel:4793329631">Call</a></div>
   </div>
-  <div class="flyers">3 flyers: 2 agents + 1 front desk</div>
+  <div class="flyers">4 flyers: 3 agent + 1 front desk &middot; +1 cookie box</div>
+  <div class="note">Joe&#x27;s sheet labeled this Bentonville, address is Pinnacle Hills Rogers. Using the Rogers address.</div>
   <textarea class="fieldnote" placeholder="Notes after the stop..."></textarea>
-  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=3103+SE+Moberly+Ln,+Bentonville,+AR+72712&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=3103+SE+Moberly+Ln,+Bentonville,+AR+72712">Google</a><label class="done"><input type="checkbox">Done</label></div>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=5100+W+Park+Ave%2C+Suite+A122%2C+Rogers%2C+AR+72758&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=5100+W+Park+Ave%2C+Suite+A122%2C+Rogers%2C+AR+72758">Google</a><label class="done"><input type="checkbox">Done</label></div>
+</div>
+
+<div class="stop">
+  <div class="stoptop"><div class="num">8</div><div><div class="office">Sudar Group</div><div class="addr">5214 Village Parkway, Suite 201, Rogers, AR 72758</div></div></div>
+  <div class="agents">
+    <div class="agent"><span class="who">Shannon West <span class="vol">#71 &middot; $7.16M</span></span><a href="tel:4792709518">Call</a></div>
+    <div class="agent"><span class="who">Rhonda Porter <span class="vol">#98 &middot; $5.63M</span></span><a href="tel:4799572721">Call</a></div>
+  </div>
+  <div class="flyers">3 flyers: 2 agent + 1 front desk &middot; +1 cookie box</div>
+  <textarea class="fieldnote" placeholder="Notes after the stop..."></textarea>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=5214+Village+Parkway%2C+Suite+201%2C+Rogers%2C+AR+72758&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=5214+Village+Parkway%2C+Suite+201%2C+Rogers%2C+AR+72758">Google</a><label class="done"><input type="checkbox">Done</label></div>
 </div>
 
 <div class="stop key">
-  <div class="stoptop"><div class="num">13</div><div><div class="office">BHGRE Journey <span class="tag">BEN FOX</span></div><div class="addr">523 SE 6th St, Bentonville</div></div></div>
+  <div class="stoptop"><div class="num">9</div><div><div class="office">Uptown Real Estate</div><div class="addr">4617 S 47th St, Rogers, AR 72758</div></div></div>
   <div class="agents">
-    <div class="agent"><span>Mayer Team (#20)</span><a href="tel:4793193737">Call</a></div>
-    <div class="agent"><span>Brandie Perry (#32)</span><a href="tel:4796407773">Call</a></div>
-    <div class="agent"><span>Matthew Bastian (#42)</span><a href="tel:4793328025">Call</a></div>
+    <div class="agent"><span class="who">Brandi Mallard <span class="vol">#32 &middot; $16.30M</span></span><a href="tel:4797218599">Call</a></div>
+    <div class="agent"><span class="who">Kendra Madewell <span class="vol">#96 &middot; $5.66M</span></span><a href="tel:4798415413">Call</a></div>
   </div>
-  <div class="flyers">4 flyers: 3 agents + 1 front desk</div>
-  <div class="note">Ben Fox's brokerage. You and Joe speak to his team June 23. Mention it at the desk, this visit builds that room.</div>
+  <div class="flyers">3 flyers: 2 agent + 1 front desk &middot; +1 cookie box</div>
+  <div class="note">Brandi Mallard is the biggest producer on this whole route at $16.3M. Different from Chanika&#x27;s Monica Goode (Uptown Fayetteville). If she&#x27;s in, take the time.</div>
   <textarea class="fieldnote" placeholder="Notes after the stop..."></textarea>
-  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=523+SE+6th+St,+Bentonville,+AR+72712&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=523+SE+6th+St,+Bentonville,+AR+72712">Google</a><label class="done"><input type="checkbox">Done</label></div>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=4617+S+47th+St%2C+Rogers%2C+AR+72758&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=4617+S+47th+St%2C+Rogers%2C+AR+72758">Google</a><label class="done"><input type="checkbox">Done</label></div>
 </div>
 
 <div class="stop">
-  <div class="stoptop"><div class="num">14</div><div><div class="office">Collier &amp; Associates</div><div class="addr">437 SW B St, Bentonville</div></div></div>
+  <div class="stoptop"><div class="num">10</div><div><div class="office">Bespoke Homes NWA</div><div class="addr">2090 W Pleasant Grove Rd, Rogers, AR 72758</div></div></div>
   <div class="agents">
-    <div class="agent"><span>Ruby Poole Team (#14)</span><a href="tel:4797772836">Call</a></div>
-    <div class="agent"><span>Michelle Brock (#31)</span><a href="tel:8704037541">Call</a></div>
+    <div class="agent"><span class="who">Jennifer Hicks <span class="vol">#80 &middot; $6.42M</span></span><a href="tel:4798664678">Call</a></div>
   </div>
-  <div class="flyers">3 flyers: 2 agents + 1 front desk</div>
+  <div class="flyers">2 flyers: 1 agent + 1 front desk &middot; +1 cookie box</div>
   <textarea class="fieldnote" placeholder="Notes after the stop..."></textarea>
-  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=437+SW+B+St,+Bentonville,+AR+72712&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=437+SW+B+St,+Bentonville,+AR+72712">Google</a><label class="done"><input type="checkbox">Done</label></div>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=2090+W+Pleasant+Grove+Rd%2C+Rogers%2C+AR+72758&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=2090+W+Pleasant+Grove+Rd%2C+Rogers%2C+AR+72758">Google</a><label class="done"><input type="checkbox">Done</label></div>
 </div>
 
 <div class="stop">
-  <div class="stoptop"><div class="num">15</div><div><div class="office">Fathom Realty (The Diaz Team)</div><div class="addr">609 SW 8th St, Suite 600, Bentonville</div></div></div>
-  <div class="agents"><div class="agent"><span>The Diaz Team (#38)</span><a href="tel:4794269107">Call</a></div></div>
-  <div class="flyers">2 flyers: 1 agent + 1 front desk</div>
+  <div class="stoptop"><div class="num">11</div><div><div class="office">Homescape Realty</div><div class="addr">6077 SW Regional Airport Blvd, No. 1, Bentonville, AR 72713</div></div></div>
+  <div class="agents">
+    <div class="agent"><span class="who">Kacie Roth <span class="vol">#46 &middot; $11.68M</span></span><a href="tel:4792242433">Call</a></div>
+  </div>
+  <div class="flyers">2 flyers: 1 agent + 1 front desk &middot; +1 cookie box</div>
+  <div class="note">Out by the airport, off the main cluster. Kacie Roth is a heavy hitter at $11.68M, worth the drive.</div>
   <textarea class="fieldnote" placeholder="Notes after the stop..."></textarea>
-  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=609+SW+8th+St,+Bentonville,+AR+72712&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=609+SW+8th+St,+Bentonville,+AR+72712">Google</a><label class="done"><input type="checkbox">Done</label></div>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=6077+SW+Regional+Airport+Blvd%2C+No.+1%2C+Bentonville%2C+AR+72713&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=6077+SW+Regional+Airport+Blvd%2C+No.+1%2C+Bentonville%2C+AR+72713">Google</a><label class="done"><input type="checkbox">Done</label></div>
 </div>
 
 <div class="stop">
-  <div class="stoptop"><div class="num">16</div><div><div class="office">NextHome NWA Pro Realty</div><div class="addr">1401 SW 14th St, Suite 3, Bentonville</div></div></div>
-  <div class="agents"><div class="agent"><span>Patrick Kuhlman (#12)</span><a href="tel:4798770184">Call</a></div></div>
-  <div class="flyers">2 flyers: 1 agent + 1 front desk</div>
+  <div class="stoptop"><div class="num">12</div><div><div class="office">Crye-Leike Gentry</div><div class="addr">217 S Gentry Blvd, Gentry, AR 72734</div></div></div>
+  <div class="agents">
+    <div class="agent"><span class="who">Jennifer Welch <span class="vol">#114 &middot; $5.01M</span></span><a href="tel:4795999292">Call</a></div>
+    <div class="agent"><span class="who">Delton Williams <span class="vol">#115 &middot; $4.91M</span></span><a href="tel:4794275623">Call</a></div>
+  </div>
+  <div class="flyers">3 flyers: 2 agent + 1 front desk &middot; +1 cookie box</div>
+  <div class="note">Farthest stop, ~20 min southwest of everything else. End of the loop.</div>
   <textarea class="fieldnote" placeholder="Notes after the stop..."></textarea>
-  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=1401+SW+14th+St,+Bentonville,+AR+72712&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=1401+SW+14th+St,+Bentonville,+AR+72712">Google</a><label class="done"><input type="checkbox">Done</label></div>
-</div>
-
-<div class="stop key">
-  <div class="stoptop"><div class="num">17</div><div><div class="office">McMullen Realty Group <span class="tag">RANK 3</span></div><div class="addr">1803 SW Regional Airport Blvd, Bentonville</div></div></div>
-  <div class="agents"><div class="agent"><span>Misty McMullen (#3)</span><a href="tel:4795955552">Call</a></div></div>
-  <div class="flyers">2 flyers: 1 agent + 1 front desk</div>
-  <div class="note">Highest producer on the route. If she's in, take the time.</div>
-  <textarea class="fieldnote" placeholder="Notes after the stop..."></textarea>
-  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=1803+SW+Regional+Airport+Blvd,+Bentonville,+AR+72712&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=1803+SW+Regional+Airport+Blvd,+Bentonville,+AR+72712">Google</a><label class="done"><input type="checkbox">Done</label></div>
-</div>
-
-<div class="stop">
-  <div class="stoptop"><div class="num">18</div><div><div class="office">Real Broker NWA</div><div class="addr">1202 McClain Rd, Bldg 7, Bentonville</div></div></div>
-  <div class="agents"><div class="agent"><span>Anthony Mosley (#43)</span><a href="tel:4793197229">Call</a></div></div>
-  <div class="flyers">2 flyers: 1 agent + 1 front desk</div>
-  <div class="note">Cloud brokerage, address web-sourced. Call Anthony before driving over.</div>
-  <textarea class="fieldnote" placeholder="Notes after the stop..."></textarea>
-  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=1202+McClain+Rd,+Bentonville,+AR+72712&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=1202+McClain+Rd,+Bentonville,+AR+72712">Google</a><label class="done"><input type="checkbox">Done</label></div>
-</div>
-
-<div class="stop">
-  <div class="stoptop"><div class="num">19</div><div><div class="office">Crawford Real Estate and Associates</div><div class="addr">241 S Elm Springs Rd, Springdale</div></div></div>
-  <div class="agents"><div class="agent"><span>Toby Crawford (#19)</span><a href="tel:4793819898">Call</a></div></div>
-  <div class="flyers">2 flyers: 1 agent + 1 front desk</div>
-  <textarea class="fieldnote" placeholder="Notes after the stop..."></textarea>
-  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=241+S+Elm+Springs+Rd,+Springdale,+AR+72762&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=241+S+Elm+Springs+Rd,+Springdale,+AR+72762">Google</a><label class="done"><input type="checkbox">Done</label></div>
-</div>
-
-<div class="stop">
-  <div class="stoptop"><div class="num">20</div><div><div class="office">Elevation Real Estate and Management</div><div class="addr">4024 Wagon Wheel Rd, Springdale</div></div></div>
-  <div class="agents"><div class="agent"><span>Leah Childress (#16)</span><a href="tel:4797158045">Call</a></div></div>
-  <div class="flyers">2 flyers: 1 agent + 1 front desk</div>
-  <textarea class="fieldnote" placeholder="Notes after the stop..."></textarea>
-  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=4024+Wagon+Wheel+Rd,+Springdale,+AR+72762&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=4024+Wagon+Wheel+Rd,+Springdale,+AR+72762">Google</a><label class="done"><input type="checkbox">Done</label></div>
-</div>
-
-<div class="stop">
-  <div class="stoptop"><div class="num">21</div><div><div class="office">RE/MAX Associates (Moldenhauer Group)</div><div class="addr">4102 N Mall Ave, Suite 201, Fayetteville</div></div></div>
-  <div class="agents"><div class="agent"><span>The Moldenhauer Group (#41)</span><a href="tel:4793416413">Call</a></div></div>
-  <div class="flyers">2 flyers: 1 agent + 1 front desk</div>
-  <textarea class="fieldnote" placeholder="Notes after the stop..."></textarea>
-  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=4102+N+Mall+Ave,+Fayetteville,+AR+72703&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=4102+N+Mall+Ave,+Fayetteville,+AR+72703">Google</a><label class="done"><input type="checkbox">Done</label></div>
-</div>
-
-<div class="stop">
-  <div class="stoptop"><div class="num">22</div><div><div class="office">Coldwell Banker HMF &mdash; Fayetteville</div><div class="addr">3589 N College Ave, Fayetteville</div></div></div>
-  <div class="agents"><div class="agent"><span>Sean Morris (#35)</span><a href="tel:4795210220">Call</a></div></div>
-  <div class="flyers">2 flyers: 1 agent + 1 front desk</div>
-  <textarea class="fieldnote" placeholder="Notes after the stop..."></textarea>
-  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=3589+N+College+Ave,+Fayetteville,+AR+72703&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=3589+N+College+Ave,+Fayetteville,+AR+72703">Google</a><label class="done"><input type="checkbox">Done</label></div>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=217+S+Gentry+Blvd%2C+Gentry%2C+AR+72734&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=217+S+Gentry+Blvd%2C+Gentry%2C+AR+72734">Google</a><label class="done"><input type="checkbox">Done</label></div>
 </div>
 
 <button class="copybtn" id="copylog">Copy full field log</button>
 
 <div class="footer">
-  <strong>Front desk play, every stop:</strong> 1 flyer to the receptionist, ask them to share PTS with the office, get their name.<br><br>
-  <strong>If the agent is in:</strong> no script, the flyer drives the conversation. If not, leave it and move.<br><br>
+  <strong>At every office:</strong> warm cookies to the front desk, ask them to share PTS with the office, get their name. One flyer per agent listed plus one for the desk.<br><br>
+  <strong>If an agent is in:</strong> no script, the flyer drives it. If not, leave it and move.<br><br>
   Prepared To Sell &middot; (479) 519-8444 &middot; preparedtosellnwa.com
 </div>
 
@@ -279,23 +203,16 @@
   stops.forEach(function(s, i){
     var cb = s.querySelector('.done input');
     var ta = s.querySelector('.fieldnote');
-    var k = 'pts_v2_'+i;
+    var k = 'pts_v3_'+i;
     try {
       var saved = localStorage.getItem(k);
-      if (saved !== null) {
-        var d = JSON.parse(saved);
-        cb.checked = !!d.done;
-        if (d.note !== undefined) ta.value = d.note;
-      }
+      if (saved !== null) { var d = JSON.parse(saved); cb.checked = !!d.done; if (d.note !== undefined) ta.value = d.note; }
       function save(){ localStorage.setItem(k, JSON.stringify({done: cb.checked, note: ta.value})); }
-      cb.addEventListener('change', save);
-      ta.addEventListener('input', save);
-      // persist prefilled defaults on first load
-      if (saved === null && (cb.checked || ta.value)) save();
+      cb.addEventListener('change', save); ta.addEventListener('input', save);
     } catch(e){}
   });
   document.getElementById('copylog').addEventListener('click', function(){
-    var lines = ['PTS Touch 3 Field Log'];
+    var lines = ['PTS Outreach Field Log'];
     stops.forEach(function(s){
       var name = s.querySelector('.office').textContent.trim();
       var done = s.querySelector('.done input').checked ? 'DONE' : 'not yet';
@@ -307,6 +224,5 @@
     else { prompt('Copy this:', txt); }
   });
 </script>
-
 </body>
 </html>
