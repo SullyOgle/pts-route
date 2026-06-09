@@ -1,228 +1,1250 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>PTS Outreach Route</title>
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>PTS Outreach Master</title>
 <style>
-  * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
-  body { font-family:-apple-system, 'DM Sans', Arial, sans-serif; background:#F5F3EE; color:#080808; padding-bottom:40px; }
-  header { background:#080808; color:#F5F3EE; padding:18px 16px 14px; position:sticky; top:0; z-index:10; }
-  header h1 { font-size:18px; font-weight:700; }
-  header p { font-size:12px; color:#5AB935; margin-top:2px; }
-  .start { background:#3B6D11; color:#fff; margin:12px; border-radius:12px; padding:14px; }
-  .start h2 { font-size:16px; font-weight:700; }
-  .start .addr { font-size:12px; color:#dceccb; margin-top:2px; }
-  .start a { display:block; margin-top:10px; background:#fff; color:#3B6D11; text-align:center; padding:11px; border-radius:9px; font-size:14px; font-weight:700; text-decoration:none; }
-  .legbtn { display:block; margin:8px 12px 0; background:#EFE9DA; color:#080808; border:1px solid #d8d2c2; text-align:center; padding:11px; border-radius:10px; font-size:13px; font-weight:700; text-decoration:none; }
-  .stop { background:#fff; margin:10px 12px; border-radius:12px; border:1px solid #e2ddd0; padding:12px 12px 10px; }
-  .stop.key { border:2px solid #5AB935; }
-  .tag { display:inline-block; font-size:10px; font-weight:700; color:#fff; background:#3B6D11; border-radius:4px; padding:2px 6px; margin-left:6px; vertical-align:middle; }
-  .stoptop { display:flex; align-items:flex-start; gap:10px; }
-  .num { background:#080808; color:#fff; min-width:30px; height:30px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:14px; }
-  .office { font-size:15px; font-weight:700; line-height:1.25; }
-  .addr { font-size:12px; color:#555; margin-top:2px; }
-  .agents { margin:8px 0 2px; }
-  .agent { display:flex; justify-content:space-between; align-items:center; padding:7px 0; border-top:1px solid #f0ece1; font-size:13px; gap:8px; }
-  .agent .who { flex:1; }
-  .agent .vol { font-size:11px; color:#3B6D11; font-weight:700; }
-  .agent a { color:#3B6D11; font-weight:700; text-decoration:none; font-size:13px; padding:6px 10px; background:#eef5e4; border-radius:8px; white-space:nowrap; }
-  .flyers { font-size:12px; font-weight:700; color:#3B6D11; margin-top:6px; }
-  .note { font-size:12px; background:#FAF7F2; border-left:3px solid #5AB935; padding:6px 8px; margin-top:8px; color:#333; }
-  .actions { display:flex; gap:8px; margin-top:10px; }
-  .nav { flex:2; background:#080808; color:#fff; text-align:center; padding:12px 0; border-radius:9px; font-size:14px; font-weight:700; text-decoration:none; }
-  .nav.alt { flex:1; background:#EFE9DA; color:#080808; border:1px solid #d8d2c2; }
-  .done { display:flex; align-items:center; gap:6px; font-size:13px; font-weight:700; padding:0 10px; }
-  .done input { width:22px; height:22px; accent-color:#3B6D11; }
-  .fieldnote { width:100%; min-height:44px; margin-top:8px; padding:8px 10px; border:1px solid #d8d2c2; border-radius:8px; font-family:inherit; font-size:13px; background:#FAF7F2; color:#080808; resize:vertical; }
-  .copybtn { display:block; margin:18px 16px 0; width:calc(100% - 32px); background:#3B6D11; color:#fff; border:none; padding:14px; border-radius:10px; font-size:15px; font-weight:700; }
-  .footer { margin:24px 16px 10px; font-size:12px; color:#555; line-height:1.5; }
-  .donestop { background:#EFE9DA; margin:10px 12px; border-radius:12px; padding:10px 12px; font-size:13px; color:#555; }
-</style>
-</head>
-<body>
-<header>
-  <h1>PTS Outreach Route &mdash; Optimized Loop</h1>
-  <p>One call. One team. Done right. &nbsp;|&nbsp; 12 offices &middot; 19 agents &middot; 31 flyers</p>
-</header>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{font-family:-apple-system,'DM Sans',Arial,sans-serif;background:#F5F3EE;color:#080808;padding-bottom:50px}
+header{background:#080808;color:#F5F3EE;padding:16px;position:sticky;top:0;z-index:10}
+header h1{font-size:17px;font-weight:700} header p{font-size:12px;color:#5AB935;margin-top:2px}
+.start{background:#3B6D11;color:#fff;margin:12px;border-radius:12px;padding:14px}
+.start h2{font-size:15px} .start .a{font-size:12px;color:#dceccb;margin-top:2px}
+.start a.btn{display:block;margin-top:10px;background:#fff;color:#3B6D11;text-align:center;padding:11px;border-radius:9px;font-weight:700;text-decoration:none;font-size:14px}
+.legbtn{display:block;margin:8px 12px 0;background:#EFE9DA;color:#080808;border:1px solid #d8d2c2;text-align:center;padding:11px;border-radius:10px;font-size:13px;font-weight:700;text-decoration:none}
+.sec{padding:20px 16px 4px;font-size:16px;font-weight:700}
+.sub{padding:14px 16px 4px;font-size:13px;font-weight:700;color:#3B6D11}
+.office{background:#fff;margin:10px 12px;border-radius:12px;border:1px solid #e2ddd0;padding:12px}
+.office.today{border:2px solid #5AB935}
+.otop{display:flex;gap:10px;align-items:flex-start}
+.num{background:#080808;color:#fff;min-width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px}
+.oname{font-size:15px;font-weight:700;line-height:1.25} .oaddr{font-size:12px;color:#555;margin-top:2px}
+.tag{display:inline-block;font-size:9px;font-weight:700;color:#fff;background:#3B6D11;border-radius:4px;padding:2px 5px;vertical-align:middle}
+.flag{font-size:12px;background:#fde9e9;border-left:3px solid #c0392b;padding:6px 8px;margin-top:8px;color:#7a2018}
+.tnote{font-size:12px;background:#FAF7F2;border-left:3px solid #5AB935;padding:6px 8px;margin-top:8px;color:#333}
+.agents{margin-top:8px}
+.agent{border-top:1px solid #f0ece1;padding:7px 0}
+.arow{display:flex;align-items:center;gap:8px}
+.adone input{width:20px;height:20px;accent-color:#3B6D11}
+.awho{flex:1;font-size:13px} .aname{font-weight:600} .ameta{font-size:11px;color:#3B6D11;font-weight:700}
+.wv{display:inline-block;font-size:9px;font-weight:700;border-radius:3px;padding:1px 4px;margin-left:2px;color:#fff}
+.w1{background:#888} .w2{background:#4D8A16} .w3{background:#3B6D11} .wref{background:#b8860b}
+.call{color:#3B6D11;font-weight:700;text-decoration:none;font-size:12px;padding:5px 9px;background:#eef5e4;border-radius:7px}
+.nocall{font-size:11px;color:#aaa}
+.ntoggle{font-size:11px;background:#EFE9DA;border:1px solid #d8d2c2;border-radius:7px;padding:5px 8px;font-weight:700}
+.anote{display:none;width:100%;margin-top:6px;padding:7px 9px;border:1px solid #d8d2c2;border-radius:8px;font-family:inherit;font-size:13px;background:#FAF7F2;min-height:38px;resize:vertical}
+.anote.show{display:block}
+.agent.done .aname{text-decoration:line-through;color:#999}
+.flyers{font-size:12px;font-weight:700;color:#3B6D11;margin-top:8px}
+.ofnlabel{font-size:11px;color:#666;margin-top:8px;font-weight:700}
+.ofnote{width:100%;margin-top:4px;padding:8px 10px;border:1px solid #d8d2c2;border-radius:8px;font-family:inherit;font-size:13px;background:#fffaf0;min-height:38px;resize:vertical}
+.actions{display:flex;gap:8px;margin-top:10px}
+.nav{flex:2;background:#080808;color:#fff;text-align:center;padding:11px 0;border-radius:9px;font-size:14px;font-weight:700;text-decoration:none}
+.nav.alt{flex:1;background:#EFE9DA;color:#080808;border:1px solid #d8d2c2}
+.copybtn{display:block;margin:18px 16px 0;width:calc(100% - 32px);background:#3B6D11;color:#fff;border:none;padding:14px;border-radius:10px;font-size:15px;font-weight:700}
+.footer{margin:22px 16px;font-size:12px;color:#555;line-height:1.5}
+</style></head><body>
+<header><h1>PTS Outreach Master</h1><p>One call. One team. Done right. &nbsp;|&nbsp; 41 offices &middot; 91 agents tracked</p></header>
 
-<div class="start">
-  <h2>START: Crumbl Cookies (pick up cookies)</h2>
-  <div class="addr">500 SE Walton Blvd, Ste 10, Bentonville, AR 72712</div>
-  <a href="https://maps.apple.com/?daddr=500+SE+Walton+Blvd%2C+Ste+10%2C+Bentonville%2C+AR+72712&dirflg=d">&#63743; Navigate to Crumbl</a>
-</div>
+<div class="start"><h2>START: 201 SW F St, Bentonville, AR 72712</h2><div class="a">Today: tight Bentonville loop, 5 offices, no Keller Williams.</div>
+<a class="btn" href="https://maps.apple.com/?daddr=201+SW+F+St%2C+Bentonville%2C+AR+72712&dirflg=d">&#63743; Open start in Apple Maps</a></div>
+<a class="legbtn" href="https://www.google.com/maps/dir/?api=1&destination=1803+SW+Regional+Airport+Blvd%2C+Bentonville%2C+AR+72712&waypoints=437+SW+B+St%2C+Bentonville%2C+AR+72712%7C211+S+Main+St%2C+Bentonville%2C+AR+72712%7C715+NW+8th+St%2C+Bentonville%2C+AR+72712%7C1401+SW+14th+St%2C+Ste+3%2C+Bentonville%2C+AR+72712&origin=201+SW+F+St%2C+Bentonville%2C+AR+72712">Full today route in Google Maps (home &rarr; 5 stops)</a>
 
-<a class="legbtn" href="https://www.google.com/maps/dir/?api=1&destination=3113+N+Walton+Blvd%2C+Bentonville%2C+AR+72712&waypoints=800+SE+Walton+Blvd%2C+Suite+2%2C+Bentonville%2C+AR+72712%7C609+SW+8th+St%2C+Suite+621%2C+Bentonville%2C+AR+72712%7C1011+N+Walton+Blvd%2C+Bentonville%2C+AR+72712%7C1111+N+Walton+Blvd%2C+Bentonville%2C+AR+72712&origin=500+SE+Walton+Blvd%2C+Ste+10%2C+Bentonville%2C+AR+72712">Full route Leg A in Google Maps (Crumbl &rarr; stops 1&ndash;5, Bentonville)</a>
-<a class="legbtn" href="https://www.google.com/maps/dir/?api=1&destination=217+S+Gentry+Blvd%2C+Gentry%2C+AR+72734&waypoints=110+N+34th+St%2C+Rogers%2C+AR+72756%7C5100+W+Park+Ave%2C+Suite+A122%2C+Rogers%2C+AR+72758%7C5214+Village+Parkway%2C+Suite+201%2C+Rogers%2C+AR+72758%7C4617+S+47th+St%2C+Rogers%2C+AR+72758%7C2090+W+Pleasant+Grove+Rd%2C+Rogers%2C+AR+72758%7C6077+SW+Regional+Airport+Blvd%2C+No.+1%2C+Bentonville%2C+AR+72713&origin=3113+N+Walton+Blvd%2C+Bentonville%2C+AR+72712">Full route Leg B in Google Maps (stops 6&ndash;12, Rogers + west)</a>
-
-<div class="donestop">Already done (June 4): KW Market Pro Branch, Bentonville. Jennifer Castro, Krystal Tronzano, Harris Group. Not on this route.</div>
-
-<div class="stop">
-  <div class="stoptop"><div class="num">1</div><div><div class="office">Crye-Leike Bentonville</div><div class="addr">800 SE Walton Blvd, Suite 2, Bentonville, AR 72712</div></div></div>
-  <div class="agents">
-    <div class="agent"><span class="who">Annette Gore Team <span class="vol">#70 &middot; $7.17M</span></span><a href="tel:4796405087">Call</a></div>
-    <div class="agent"><span class="who">Jean Lance <span class="vol">#88 &middot; $6.09M</span></span><a href="tel:4795314582">Call</a></div>
+<div class="sec">Today's route &mdash; 5 stops</div>
+<div class="office today" data-onote="pts4:o:collier-associates-bentonville" data-onote-default="Went last week; Conrad went 6/8. Hit again soon.">
+  <div class="otop"><div class="num">1</div><div><div class="oname">Collier &amp; Associates Bentonville <span class="tag">TODAY</span></div><div class="oaddr">437 SW B St, Bentonville, AR 72712</div></div></div>
+  <div class="tnote">Closest to home. New W3 agent Ashley Ha plus the W1 agents.</div>
+  <div class="agents">  <div class="agent" data-k="pts4:a:collier-associates-bentonville:ruby-poole-team" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Ruby Poole Team</span> <span class="ameta">#14</span> <span class="wv ww1">W1</span></div>
+      <a class="call" href="tel:4797772836">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
   </div>
-  <div class="flyers">3 flyers: 2 agent + 1 front desk &middot; +1 cookie box</div>
-  <div class="note">Address resolved by web: Joe&#x27;s sheet said 3003 W Walnut, that&#x27;s the Rogers office. This is the real Bentonville one, two doors from Crumbl. Confirm with Joe.</div>
-  <textarea class="fieldnote" placeholder="Notes after the stop..."></textarea>
-  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=800+SE+Walton+Blvd%2C+Suite+2%2C+Bentonville%2C+AR+72712&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=800+SE+Walton+Blvd%2C+Suite+2%2C+Bentonville%2C+AR+72712">Google</a><label class="done"><input type="checkbox">Done</label></div>
-</div>
-
-<div class="stop">
-  <div class="stoptop"><div class="num">2</div><div><div class="office">Soho NWA</div><div class="addr">609 SW 8th St, Suite 621, Bentonville, AR 72712</div></div></div>
-  <div class="agents">
-    <div class="agent"><span class="who">Soho NWA team <span class="vol">#117 &middot; $4.90M</span></span><a href="tel:4792000031">Call</a></div>
+  <div class="agent" data-k="pts4:a:collier-associates-bentonville:michelle-brock" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Michelle Brock</span> <span class="ameta">#31</span> <span class="wv ww1">W1</span></div>
+      <a class="call" href="tel:8704037541">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
   </div>
-  <div class="flyers">2 flyers: 1 agent + 1 front desk &middot; +1 cookie box</div>
-  <textarea class="fieldnote" placeholder="Notes after the stop..."></textarea>
-  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=609+SW+8th+St%2C+Suite+621%2C+Bentonville%2C+AR+72712&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=609+SW+8th+St%2C+Suite+621%2C+Bentonville%2C+AR+72712">Google</a><label class="done"><input type="checkbox">Done</label></div>
-</div>
-
-<div class="stop">
-  <div class="stoptop"><div class="num">3</div><div><div class="office">Burnett RE / ConnectRealty</div><div class="addr">1011 N Walton Blvd, Bentonville, AR 72712</div></div></div>
-  <div class="agents">
-    <div class="agent"><span class="who">Cody Burnett <span class="vol">#72 &middot; $7.08M</span></span><a href="tel:4796408375">Call</a></div>
+  <div class="agent" data-k="pts4:a:collier-associates-bentonville:matthew-dickhut" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Matthew Dickhut</span> <span class="ameta">#60 &middot; $8,285,275</span> <span class="wv ww2">W2</span></div>
+      <a class="call" href="tel:4797219751">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
   </div>
-  <div class="flyers">2 flyers: 1 agent + 1 front desk &middot; +1 cookie box</div>
-  <textarea class="fieldnote" placeholder="Notes after the stop..."></textarea>
-  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=1011+N+Walton+Blvd%2C+Bentonville%2C+AR+72712&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=1011+N+Walton+Blvd%2C+Bentonville%2C+AR+72712">Google</a><label class="done"><input type="checkbox">Done</label></div>
-</div>
-
-<div class="stop">
-  <div class="stoptop"><div class="num">4</div><div><div class="office">NWA Residential RE</div><div class="addr">1111 N Walton Blvd, Bentonville, AR 72712</div></div></div>
-  <div class="agents">
-    <div class="agent"><span class="who">Danielle Hefley <span class="vol">#50 &middot; $9.88M</span></span><a href="tel:4795444779">Call</a></div>
+  <div class="agent" data-k="pts4:a:collier-associates-bentonville:kelley-humbard" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Kelley Humbard</span> <span class="ameta">#106 &middot; $5,289,625</span> <span class="wv ww2">W2</span></div>
+      <a class="call" href="tel:4792282996">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
   </div>
-  <div class="flyers">2 flyers: 1 agent + 1 front desk &middot; +1 cookie box</div>
-  <textarea class="fieldnote" placeholder="Notes after the stop..."></textarea>
-  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=1111+N+Walton+Blvd%2C+Bentonville%2C+AR+72712&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=1111+N+Walton+Blvd%2C+Bentonville%2C+AR+72712">Google</a><label class="done"><input type="checkbox">Done</label></div>
-</div>
-
-<div class="stop key">
-  <div class="stoptop"><div class="num">5</div><div><div class="office">Coldwell Banker HMF - Bentonville</div><div class="addr">3113 N Walton Blvd, Bentonville, AR 72712</div></div></div>
-  <div class="agents">
-    <div class="agent"><span class="who">Tiffany Cox <span class="vol">#43 &middot; $12.01M</span></span><a href="tel:4798770259">Call</a></div>
-    <div class="agent"><span class="who">Sheryl Carman <span class="vol">#113 &middot; $5.03M</span></span><a href="tel:4795310901">Call</a></div>
+  <div class="agent" data-k="pts4:a:collier-associates-bentonville:phillip-shepard" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Phillip Shepard</span> <span class="ameta">#125 &middot; $4,508,400</span> <span class="wv ww2">W2</span></div>
+      <a class="call" href="tel:4793329631">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
   </div>
-  <div class="flyers">3 flyers: 2 agent + 1 front desk &middot; +1 cookie box</div>
-  <div class="note">Different agents than Chanika&#x27;s pipeline (she has Meza Harris, Aricka Finger, Kate Cox). No conflict, Joe deconflicted it.</div>
-  <textarea class="fieldnote" placeholder="Notes after the stop..."></textarea>
-  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=3113+N+Walton+Blvd%2C+Bentonville%2C+AR+72712&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=3113+N+Walton+Blvd%2C+Bentonville%2C+AR+72712">Google</a><label class="done"><input type="checkbox">Done</label></div>
+  <div class="agent" data-k="pts4:a:collier-associates-bentonville:ashley-ha" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Ashley Ha</span> <span class="ameta">#232 &middot; $2,657,127</span> <span class="wv ww3">W3</span></div>
+      <a class="call" href="tel:4792216000">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div></div>
+  <div class="flyers">7 flyers: 6 agent + 1 front desk &middot; +1 cookie</div>
+  <div class="ofnlabel">Front desk / office note:</div>
+  <textarea class="ofnote" placeholder="Front desk wrap..."></textarea>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=437+SW+B+St%2C+Bentonville%2C+AR+72712&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=437+SW+B+St%2C+Bentonville%2C+AR+72712">Google</a></div>
 </div>
-
-<div class="stop">
-  <div class="stoptop"><div class="num">6</div><div><div class="office">eXp Realty NWA</div><div class="addr">110 N 34th St, Rogers, AR 72756</div></div></div>
-  <div class="agents">
-    <div class="agent"><span class="who">Jose Esparza <span class="vol">#83 &middot; $6.36M</span></span><a href="tel:4797218847">Call</a></div>
+<div class="office today" data-onote="pts4:o:engel-volkers-bentonville" data-onote-default="">
+  <div class="otop"><div class="num">2</div><div><div class="oname">Engel &amp; Volkers Bentonville <span class="tag">TODAY</span></div><div class="oaddr">211 S Main St, Bentonville, AR 72712</div></div></div>
+  <div class="tnote">Downtown on Main. New office, never visited.</div>
+  <div class="agents">  <div class="agent" data-k="pts4:a:engel-volkers-bentonville:redman-team" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Redman Team</span> <span class="ameta">#150 &middot; $3,834,399</span> <span class="wv ww3">W3</span></div>
+      <a class="call" href="tel:4792685170">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
   </div>
-  <div class="flyers">2 flyers: 1 agent + 1 front desk &middot; +1 cookie box</div>
-  <textarea class="fieldnote" placeholder="Notes after the stop..."></textarea>
-  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=110+N+34th+St%2C+Rogers%2C+AR+72756&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=110+N+34th+St%2C+Rogers%2C+AR+72756">Google</a><label class="done"><input type="checkbox">Done</label></div>
+  <div class="agent" data-k="pts4:a:engel-volkers-bentonville:alyson-jacobs" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Alyson Jacobs</span> <span class="ameta">#181 &middot; $3,318,500</span> <span class="wv ww3">W3</span></div>
+      <a class="call" href="tel:4792685170">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div></div>
+  <div class="flyers">3 flyers: 2 agent + 1 front desk &middot; +1 cookie</div>
+  <div class="ofnlabel">Front desk / office note:</div>
+  <textarea class="ofnote" placeholder="Front desk wrap..."></textarea>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=211+S+Main+St%2C+Bentonville%2C+AR+72712&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=211+S+Main+St%2C+Bentonville%2C+AR+72712">Google</a></div>
 </div>
-
-<div class="stop">
-  <div class="stoptop"><div class="num">7</div><div><div class="office">Collier &amp; Associates</div><div class="addr">5100 W Park Ave, Suite A122, Rogers, AR 72758</div></div></div>
-  <div class="agents">
-    <div class="agent"><span class="who">Matthew Dickhut <span class="vol">#60 &middot; $8.29M</span></span><a href="tel:4797219751">Call</a></div>
-    <div class="agent"><span class="who">Kelley Humbard <span class="vol">#106 &middot; $5.29M</span></span><a href="tel:4792282996">Call</a></div>
-    <div class="agent"><span class="who">Phillip Shepard <span class="vol">#125 &middot; $4.51M</span></span><a href="tel:4793329631">Call</a></div>
+<div class="office today" data-onote="pts4:o:viridian-real-estate" data-onote-default="">
+  <div class="otop"><div class="num">3</div><div><div class="oname">Viridian Real Estate <span class="tag">TODAY</span></div><div class="oaddr">715 NW 8th St, Bentonville, AR 72712</div></div></div>
+  <div class="tnote">Central Bentonville, never visited. Three W3 agents.</div>
+  <div class="agents">  <div class="agent" data-k="pts4:a:viridian-real-estate:ka-kue" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Ka Kue</span> <span class="ameta">#167 &middot; $3,555,800</span> <span class="wv ww3">W3</span></div>
+      <a class="call" href="tel:4793264848">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
   </div>
-  <div class="flyers">4 flyers: 3 agent + 1 front desk &middot; +1 cookie box</div>
-  <div class="note">Joe&#x27;s sheet labeled this Bentonville, address is Pinnacle Hills Rogers. Using the Rogers address.</div>
-  <textarea class="fieldnote" placeholder="Notes after the stop..."></textarea>
-  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=5100+W+Park+Ave%2C+Suite+A122%2C+Rogers%2C+AR+72758&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=5100+W+Park+Ave%2C+Suite+A122%2C+Rogers%2C+AR+72758">Google</a><label class="done"><input type="checkbox">Done</label></div>
-</div>
-
-<div class="stop">
-  <div class="stoptop"><div class="num">8</div><div><div class="office">Sudar Group</div><div class="addr">5214 Village Parkway, Suite 201, Rogers, AR 72758</div></div></div>
-  <div class="agents">
-    <div class="agent"><span class="who">Shannon West <span class="vol">#71 &middot; $7.16M</span></span><a href="tel:4792709518">Call</a></div>
-    <div class="agent"><span class="who">Rhonda Porter <span class="vol">#98 &middot; $5.63M</span></span><a href="tel:4799572721">Call</a></div>
+  <div class="agent" data-k="pts4:a:viridian-real-estate:judy-brown" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Judy Brown</span> <span class="ameta">#182 &middot; $3,304,500</span> <span class="wv ww3">W3</span></div>
+      <a class="call" href="tel:4793264848">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
   </div>
-  <div class="flyers">3 flyers: 2 agent + 1 front desk &middot; +1 cookie box</div>
-  <textarea class="fieldnote" placeholder="Notes after the stop..."></textarea>
-  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=5214+Village+Parkway%2C+Suite+201%2C+Rogers%2C+AR+72758&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=5214+Village+Parkway%2C+Suite+201%2C+Rogers%2C+AR+72758">Google</a><label class="done"><input type="checkbox">Done</label></div>
+  <div class="agent" data-k="pts4:a:viridian-real-estate:katherine-grote" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Katherine Grote</span> <span class="ameta">#229 &middot; $2,695,000</span> <span class="wv ww3">W3</span></div>
+      <a class="call" href="tel:4793264848">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div></div>
+  <div class="flyers">4 flyers: 3 agent + 1 front desk &middot; +1 cookie</div>
+  <div class="ofnlabel">Front desk / office note:</div>
+  <textarea class="ofnote" placeholder="Front desk wrap..."></textarea>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=715+NW+8th+St%2C+Bentonville%2C+AR+72712&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=715+NW+8th+St%2C+Bentonville%2C+AR+72712">Google</a></div>
 </div>
-
-<div class="stop key">
-  <div class="stoptop"><div class="num">9</div><div><div class="office">Uptown Real Estate</div><div class="addr">4617 S 47th St, Rogers, AR 72758</div></div></div>
-  <div class="agents">
-    <div class="agent"><span class="who">Brandi Mallard <span class="vol">#32 &middot; $16.30M</span></span><a href="tel:4797218599">Call</a></div>
-    <div class="agent"><span class="who">Kendra Madewell <span class="vol">#96 &middot; $5.66M</span></span><a href="tel:4798415413">Call</a></div>
+<div class="office today" data-onote="pts4:o:nexthome-nwa-pro-realty" data-onote-default="">
+  <div class="otop"><div class="num">4</div><div><div class="oname">NextHome NWA Pro Realty <span class="tag">TODAY</span></div><div class="oaddr">1401 SW 14th St, Ste 3, Bentonville, AR 72712</div></div></div>
+  <div class="tnote">SW Bentonville. New W3 team plus Patrick from W1.</div>
+  <div class="agents">  <div class="agent" data-k="pts4:a:nexthome-nwa-pro-realty:patrick-kuhlman" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Patrick Kuhlman</span> <span class="ameta">#12</span> <span class="wv ww1">W1</span></div>
+      <a class="call" href="tel:4798770184">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
   </div>
-  <div class="flyers">3 flyers: 2 agent + 1 front desk &middot; +1 cookie box</div>
-  <div class="note">Brandi Mallard is the biggest producer on this whole route at $16.3M. Different from Chanika&#x27;s Monica Goode (Uptown Fayetteville). If she&#x27;s in, take the time.</div>
-  <textarea class="fieldnote" placeholder="Notes after the stop..."></textarea>
-  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=4617+S+47th+St%2C+Rogers%2C+AR+72758&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=4617+S+47th+St%2C+Rogers%2C+AR+72758">Google</a><label class="done"><input type="checkbox">Done</label></div>
+  <div class="agent" data-k="pts4:a:nexthome-nwa-pro-realty:nwa-proteam" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">NWA ProTeam</span> <span class="ameta">#73 &middot; $7,033,700</span> <span class="wv ww3">W3</span></div>
+      <a class="call" href="tel:4792255511">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div></div>
+  <div class="flyers">3 flyers: 2 agent + 1 front desk &middot; +1 cookie</div>
+  <div class="ofnlabel">Front desk / office note:</div>
+  <textarea class="ofnote" placeholder="Front desk wrap..."></textarea>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=1401+SW+14th+St%2C+Ste+3%2C+Bentonville%2C+AR+72712&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=1401+SW+14th+St%2C+Ste+3%2C+Bentonville%2C+AR+72712">Google</a></div>
 </div>
-
-<div class="stop">
-  <div class="stoptop"><div class="num">10</div><div><div class="office">Bespoke Homes NWA</div><div class="addr">2090 W Pleasant Grove Rd, Rogers, AR 72758</div></div></div>
-  <div class="agents">
-    <div class="agent"><span class="who">Jennifer Hicks <span class="vol">#80 &middot; $6.42M</span></span><a href="tel:4798664678">Call</a></div>
+<div class="office today" data-onote="pts4:o:mcmullen-realty-group" data-onote-default="">
+  <div class="otop"><div class="num">5</div><div><div class="oname">McMullen Realty Group <span class="tag">TODAY</span></div><div class="oaddr">1803 SW Regional Airport Blvd, Bentonville, AR 72712</div></div></div>
+  <div class="tnote">Misty McMullen is rank 3, the top producer in the whole tracker ($69.9M). If she is in, take the time.</div>
+  <div class="agents">  <div class="agent" data-k="pts4:a:mcmullen-realty-group:misty-mcmullen" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Misty McMullen</span> <span class="ameta">#3 &middot; $69,919,401</span> <span class="wv ww1">W1</span><span class="wv ww3">W3</span></div>
+      <a class="call" href="tel:4795955552">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div></div>
+  <div class="flyers">2 flyers: 1 agent + 1 front desk &middot; +1 cookie</div>
+  <div class="ofnlabel">Front desk / office note:</div>
+  <textarea class="ofnote" placeholder="Front desk wrap..."></textarea>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=1803+SW+Regional+Airport+Blvd%2C+Bentonville%2C+AR+72712&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=1803+SW+Regional+Airport+Blvd%2C+Bentonville%2C+AR+72712">Google</a></div>
+</div>
+<div class="sec">Full master &mdash; everywhere else</div>
+<div class="sub">Bentonville</div>
+<div class="office" data-onote="pts4:o:kw-market-pro-branch" data-onote-default="">
+  <div class="otop"><div><div class="oname">KW Market Pro Branch </div><div class="oaddr">3105 NE 11th St, Ste 5, Bentonville, AR 72712</div></div></div>
+  
+  <div class="agents">  <div class="agent" data-k="pts4:a:kw-market-pro-branch:joseph-hayes-associates" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Joseph Hayes Associates</span> <span class="ameta">#11 &middot; $40,459,417</span> <span class="wv ww1">W1</span><span class="wv ww3">W3</span></div>
+      <a class="call" href="tel:4798718108">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
   </div>
-  <div class="flyers">2 flyers: 1 agent + 1 front desk &middot; +1 cookie box</div>
-  <textarea class="fieldnote" placeholder="Notes after the stop..."></textarea>
-  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=2090+W+Pleasant+Grove+Rd%2C+Rogers%2C+AR+72758&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=2090+W+Pleasant+Grove+Rd%2C+Rogers%2C+AR+72758">Google</a><label class="done"><input type="checkbox">Done</label></div>
-</div>
-
-<div class="stop">
-  <div class="stoptop"><div class="num">11</div><div><div class="office">Homescape Realty</div><div class="addr">6077 SW Regional Airport Blvd, No. 1, Bentonville, AR 72713</div></div></div>
-  <div class="agents">
-    <div class="agent"><span class="who">Kacie Roth <span class="vol">#46 &middot; $11.68M</span></span><a href="tel:4792242433">Call</a></div>
+  <div class="agent" data-k="pts4:a:kw-market-pro-branch:the-duley-group" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">The Duley Group</span> <span class="ameta">#13 &middot; $33,034,849</span> <span class="wv ww1">W1</span><span class="wv ww3">W3</span></div>
+      <a class="call" href="tel:4796164663">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
   </div>
-  <div class="flyers">2 flyers: 1 agent + 1 front desk &middot; +1 cookie box</div>
-  <div class="note">Out by the airport, off the main cluster. Kacie Roth is a heavy hitter at $11.68M, worth the drive.</div>
-  <textarea class="fieldnote" placeholder="Notes after the stop..."></textarea>
-  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=6077+SW+Regional+Airport+Blvd%2C+No.+1%2C+Bentonville%2C+AR+72713&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=6077+SW+Regional+Airport+Blvd%2C+No.+1%2C+Bentonville%2C+AR+72713">Google</a><label class="done"><input type="checkbox">Done</label></div>
-</div>
-
-<div class="stop">
-  <div class="stoptop"><div class="num">12</div><div><div class="office">Crye-Leike Gentry</div><div class="addr">217 S Gentry Blvd, Gentry, AR 72734</div></div></div>
-  <div class="agents">
-    <div class="agent"><span class="who">Jennifer Welch <span class="vol">#114 &middot; $5.01M</span></span><a href="tel:4795999292">Call</a></div>
-    <div class="agent"><span class="who">Delton Williams <span class="vol">#115 &middot; $4.91M</span></span><a href="tel:4794275623">Call</a></div>
+  <div class="agent" data-k="pts4:a:kw-market-pro-branch:the-ej-johnson-group" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">The EJ Johnson Group</span> <span class="ameta">#18 &middot; $28,141,904</span> <span class="wv ww1">W1</span><span class="wv ww3">W3</span></div>
+      <a class="call" href="tel:4798711030">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
   </div>
-  <div class="flyers">3 flyers: 2 agent + 1 front desk &middot; +1 cookie box</div>
-  <div class="note">Farthest stop, ~20 min southwest of everything else. End of the loop.</div>
-  <textarea class="fieldnote" placeholder="Notes after the stop..."></textarea>
-  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=217+S+Gentry+Blvd%2C+Gentry%2C+AR+72734&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=217+S+Gentry+Blvd%2C+Gentry%2C+AR+72734">Google</a><label class="done"><input type="checkbox">Done</label></div>
+  <div class="agent" data-k="pts4:a:kw-market-pro-branch:lighthouse-group-nwa" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Lighthouse Group NWA</span> <span class="ameta">#27 &middot; $20,203,377</span> <span class="wv ww1">W1</span><span class="wv ww3">W3</span></div>
+      <a class="call" href="tel:4797177710">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div>
+  <div class="agent" data-k="pts4:a:kw-market-pro-branch:jennifer-castro" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Jennifer Castro</span> <span class="ameta">#29 &middot; $17,667,466</span> <span class="wv ww2">W2</span><span class="wv ww3">W3</span></div>
+      <a class="call" href="tel:4797212350">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div>
+  <div class="agent" data-k="pts4:a:kw-market-pro-branch:cammi-hevener" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Cammi Hevener</span> <span class="ameta">#33 &middot; $13,842,500</span> <span class="wv ww1">W1</span><span class="wv ww3">W3</span></div>
+      <a class="call" href="tel:4795243123">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div>
+  <div class="agent" data-k="pts4:a:kw-market-pro-branch:gleghorn-team" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Gleghorn Team</span> <span class="ameta">#34 &middot; $13,191,500</span> <span class="wv ww1">W1</span><span class="wv ww3">W3</span></div>
+      <a class="call" href="tel:4796333077">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div>
+  <div class="agent" data-k="pts4:a:kw-market-pro-branch:motus-group" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Motus Group</span> <span class="ameta">#36 &middot; $11,091,800</span> <span class="wv ww1">W1</span><span class="wv ww3">W3</span></div>
+      <a class="call" href="tel:4795951000">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div>
+  <div class="agent" data-k="pts4:a:kw-market-pro-branch:krystal-tronzano" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Krystal Tronzano</span> <span class="ameta">#45 &middot; $11,847,500</span> <span class="wv ww2">W2</span></div>
+      <a class="call" href="tel:4797878335">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div>
+  <div class="agent" data-k="pts4:a:kw-market-pro-branch:julie-wolfe" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Julie Wolfe</span> <span class="ameta">#122 &middot; $4,737,500</span> <span class="wv ww3">W3</span></div>
+      <a class="call" href="tel:4793609975">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div>
+  <div class="agent" data-k="pts4:a:kw-market-pro-branch:harris-group" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Harris Group</span> <span class="ameta">#124 &middot; $4,527,750</span> <span class="wv ww2">W2</span></div>
+      <a class="call" href="tel:4792950290">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div>
+  <div class="agent" data-k="pts4:a:kw-market-pro-branch:nwa-real-estate-hub" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">NWA Real Estate HUB</span> <span class="ameta">#130 &middot; $4,415,446</span> <span class="wv ww3">W3</span></div>
+      <a class="call" href="tel:4798790635">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div>
+  <div class="agent" data-k="pts4:a:kw-market-pro-branch:nichole-mannion" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Nichole Mannion</span> <span class="ameta">#131 &middot; $4,394,000</span> <span class="wv ww3">W3</span></div>
+      <span class="nocall">no #</span>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div>
+  <div class="agent" data-k="pts4:a:kw-market-pro-branch:jaime-howell" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Jaime Howell</span> <span class="ameta">#160 &middot; $3,658,480</span> <span class="wv ww3">W3</span></div>
+      <a class="call" href="tel:4793095969">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div>
+  <div class="agent" data-k="pts4:a:kw-market-pro-branch:jonathan-leach" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Jonathan Leach</span> <span class="ameta">#164 &middot; $3,605,000</span> <span class="wv ww3">W3</span></div>
+      <a class="call" href="tel:4172969880">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div>
+  <div class="agent" data-k="pts4:a:kw-market-pro-branch:cameron-lagrone" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Cameron LaGrone</span> <span class="ameta">#200 &middot; $2,911,000</span> <span class="wv ww3">W3</span></div>
+      <span class="nocall">no #</span>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div>
+  <div class="agent" data-k="pts4:a:kw-market-pro-branch:mg-realty-group" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">MG Realty Group</span> <span class="ameta">#241 &middot; $2,584,400</span> <span class="wv ww3">W3</span></div>
+      <span class="nocall">no #</span>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div></div>
+  <div class="flyers">18 flyers: 17 agent + 1 front desk &middot; +1 cookie</div>
+  <div class="ofnlabel">Front desk / office note:</div>
+  <textarea class="ofnote" placeholder="Front desk wrap..."></textarea>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=3105+NE+11th+St%2C+Ste+5%2C+Bentonville%2C+AR+72712&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=3105+NE+11th+St%2C+Ste+5%2C+Bentonville%2C+AR+72712">Google</a></div>
 </div>
-
+<div class="office" data-onote="pts4:o:coldwell-banker-hmf-bentonville" data-onote-default="6/8 met front desk (Linda) + Sheryl. Loved it, want a team talk. Waiting on Steven. HOT.">
+  <div class="otop"><div><div class="oname">Coldwell Banker HMF Bentonville </div><div class="oaddr">3113 N Walton Blvd, Bentonville, AR 72712</div></div></div>
+  
+  <div class="agents">  <div class="agent" data-k="pts4:a:coldwell-banker-hmf-bentonville:jan-holland" data-done="1">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Jan Holland</span> <span class="ameta">#26 &middot; $21,009,650</span> <span class="wv ww1">W1</span><span class="wv ww3">W3</span></div>
+      <a class="call" href="tel:4796445676">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div>
+  <div class="agent" data-k="pts4:a:coldwell-banker-hmf-bentonville:kate-cox" data-done="1">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Kate Cox</span> <span class="ameta">#39 &middot; $7,001,000</span> <span class="wv ww1">W1</span><span class="wv ww3">W3</span></div>
+      <a class="call" href="tel:4797999628">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div>
+  <div class="agent" data-k="pts4:a:coldwell-banker-hmf-bentonville:tiffany-cox" data-done="1">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Tiffany Cox</span> <span class="ameta">#43 &middot; $12,009,470</span> <span class="wv ww2">W2</span></div>
+      <a class="call" href="tel:4798770259">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div>
+  <div class="agent" data-k="pts4:a:coldwell-banker-hmf-bentonville:sheryl-carman" data-done="1">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Sheryl Carman</span> <span class="ameta">#113 &middot; $5,033,725</span> <span class="wv ww2">W2</span></div>
+      <a class="call" href="tel:4795310901">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div>
+  <div class="agent" data-k="pts4:a:coldwell-banker-hmf-bentonville:holly-hicks" data-done="1">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Holly Hicks</span> <span class="ameta">#163 &middot; $3,609,000</span> <span class="wv ww3">W3</span></div>
+      <a class="call" href="tel:4793665317">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div>
+  <div class="agent" data-k="pts4:a:coldwell-banker-hmf-bentonville:alta-felix" data-done="1">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Alta Felix</span> <span class="ameta">#188 &middot; $3,213,000</span> <span class="wv ww3">W3</span></div>
+      <a class="call" href="tel:4808624466">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div>
+  <div class="agent" data-k="pts4:a:coldwell-banker-hmf-bentonville:hiedi-shively" data-done="1">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Hiedi Shively</span> <span class="ameta">#230 &middot; $2,680,000</span> <span class="wv ww3">W3</span></div>
+      <a class="call" href="tel:4799258575">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div>
+  <div class="agent" data-k="pts4:a:coldwell-banker-hmf-bentonville:tanner-bedwell" data-done="1">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Tanner Bedwell</span> <span class="ameta">#231 &middot; $2,664,000</span> <span class="wv ww3">W3</span></div>
+      <a class="call" href="tel:4792631313">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div></div>
+  <div class="flyers">9 flyers: 8 agent + 1 front desk &middot; +1 cookie</div>
+  <div class="ofnlabel">Front desk / office note:</div>
+  <textarea class="ofnote" placeholder="Front desk wrap..."></textarea>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=3113+N+Walton+Blvd%2C+Bentonville%2C+AR+72712&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=3113+N+Walton+Blvd%2C+Bentonville%2C+AR+72712">Google</a></div>
+</div>
+<div class="office" data-onote="pts4:o:bhgre-journey" data-onote-default="">
+  <div class="otop"><div><div class="oname">BHGRE Journey </div><div class="oaddr">523 SE 6th St, Bentonville, AR 72712</div></div></div>
+  
+  <div class="agents">  <div class="agent" data-k="pts4:a:bhgre-journey:mayer-team" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Mayer Team</span> <span class="ameta">#20</span> <span class="wv ww1">W1</span></div>
+      <a class="call" href="tel:4793193737">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div>
+  <div class="agent" data-k="pts4:a:bhgre-journey:brandie-perry" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Brandie Perry</span> <span class="ameta">#32</span> <span class="wv ww1">W1</span></div>
+      <a class="call" href="tel:4796407773">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div>
+  <div class="agent" data-k="pts4:a:bhgre-journey:matthew-bastian" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Matthew Bastian</span> <span class="ameta">#42</span> <span class="wv ww1">W1</span></div>
+      <a class="call" href="tel:4793328025">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div></div>
+  <div class="flyers">4 flyers: 3 agent + 1 front desk &middot; +1 cookie</div>
+  <div class="ofnlabel">Front desk / office note:</div>
+  <textarea class="ofnote" placeholder="Front desk wrap..."></textarea>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=523+SE+6th+St%2C+Bentonville%2C+AR+72712&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=523+SE+6th+St%2C+Bentonville%2C+AR+72712">Google</a></div>
+</div>
+<div class="office" data-onote="pts4:o:burnett-re-connectrealty" data-onote-default="6/8 Cody not in, front desk interested, will pass to Cody.">
+  <div class="otop"><div><div class="oname">Burnett RE / ConnectRealty </div><div class="oaddr">1011 N Walton Blvd, Bentonville, AR 72712</div></div></div>
+  
+  <div class="agents">  <div class="agent" data-k="pts4:a:burnett-re-connectrealty:cody-burnett" data-done="1">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Cody Burnett</span> <span class="ameta">#72 &middot; $7,076,212</span> <span class="wv ww2">W2</span></div>
+      <a class="call" href="tel:4796408375">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div>
+  <div class="agent" data-k="pts4:a:burnett-re-connectrealty:aaron-ingle" data-done="1">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Aaron Ingle</span> <span class="ameta">#185 &middot; $3,239,150</span> <span class="wv ww3">W3</span></div>
+      <a class="call" href="tel:4793611180">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div>
+  <div class="agent" data-k="pts4:a:burnett-re-connectrealty:jason-tinder" data-done="1">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Jason Tinder</span> <span class="ameta">#242 &middot; $2,573,000</span> <span class="wv ww3">W3</span></div>
+      <a class="call" href="tel:4793611180">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div></div>
+  <div class="flyers">4 flyers: 3 agent + 1 front desk &middot; +1 cookie</div>
+  <div class="ofnlabel">Front desk / office note:</div>
+  <textarea class="ofnote" placeholder="Front desk wrap..."></textarea>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=1011+N+Walton+Blvd%2C+Bentonville%2C+AR+72712&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=1011+N+Walton+Blvd%2C+Bentonville%2C+AR+72712">Google</a></div>
+</div>
+<div class="office" data-onote="pts4:o:re-max-real-estate-results" data-onote-default="">
+  <div class="otop"><div><div class="oname">RE/MAX Real Estate Results </div><div class="oaddr">3103 SE Moberly Ln, Bentonville, AR 72712</div></div></div>
+  
+  <div class="agents">  <div class="agent" data-k="pts4:a:re-max-real-estate-results:koenigseder-realty-group" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Koenigseder Realty Group</span> <span class="ameta">#22</span> <span class="wv ww1">W1</span></div>
+      <a class="call" href="tel:4796198309">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div>
+  <div class="agent" data-k="pts4:a:re-max-real-estate-results:michael-hodges" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Michael Hodges</span> <span class="ameta">#29</span> <span class="wv ww1">W1</span></div>
+      <a class="call" href="tel:4792719595">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div></div>
+  <div class="flyers">3 flyers: 2 agent + 1 front desk &middot; +1 cookie</div>
+  <div class="ofnlabel">Front desk / office note:</div>
+  <textarea class="ofnote" placeholder="Front desk wrap..."></textarea>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=3103+SE+Moberly+Ln%2C+Bentonville%2C+AR+72712&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=3103+SE+Moberly+Ln%2C+Bentonville%2C+AR+72712">Google</a></div>
+</div>
+<div class="office" data-onote="pts4:o:crye-leike-bentonville" data-onote-default="6/8 no one in, dropped flyer + cookie.">
+  <div class="otop"><div><div class="oname">Crye-Leike Bentonville </div><div class="oaddr">800 SE Walton Blvd, Ste 2, Bentonville, AR 72712</div></div></div>
+  
+  <div class="agents">  <div class="agent" data-k="pts4:a:crye-leike-bentonville:annette-gore-team" data-done="1">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Annette Gore Team</span> <span class="ameta">#70 &middot; $7,170,500</span> <span class="wv ww2">W2</span></div>
+      <a class="call" href="tel:4796405087">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div>
+  <div class="agent" data-k="pts4:a:crye-leike-bentonville:jean-lance" data-done="1">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Jean Lance</span> <span class="ameta">#88 &middot; $6,092,000</span> <span class="wv ww2">W2</span></div>
+      <a class="call" href="tel:4795314582">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div></div>
+  <div class="flyers">3 flyers: 2 agent + 1 front desk &middot; +1 cookie</div>
+  <div class="ofnlabel">Front desk / office note:</div>
+  <textarea class="ofnote" placeholder="Front desk wrap..."></textarea>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=800+SE+Walton+Blvd%2C+Ste+2%2C+Bentonville%2C+AR+72712&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=800+SE+Walton+Blvd%2C+Ste+2%2C+Bentonville%2C+AR+72712">Google</a></div>
+</div>
+<div class="office" data-onote="pts4:o:homescape-realty" data-onote-default="6/8 older gentleman, zero interest.">
+  <div class="otop"><div><div class="oname">Homescape Realty </div><div class="oaddr">6077 SW Regional Airport Blvd, No. 1, Bentonville, AR 72713</div></div></div>
+  
+  <div class="agents">  <div class="agent" data-k="pts4:a:homescape-realty:kacie-roth" data-done="1">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Kacie Roth</span> <span class="ameta">#46 &middot; $11,683,343</span> <span class="wv ww2">W2</span></div>
+      <a class="call" href="tel:4792242433">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div>
+  <div class="agent" data-k="pts4:a:homescape-realty:kayla-colon" data-done="1">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Kayla Colon</span> <span class="ameta">#139 &middot; $4,135,490</span> <span class="wv ww3">W3</span></div>
+      <a class="call" href="tel:4794447700">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div></div>
+  <div class="flyers">3 flyers: 2 agent + 1 front desk &middot; +1 cookie</div>
+  <div class="ofnlabel">Front desk / office note:</div>
+  <textarea class="ofnote" placeholder="Front desk wrap..."></textarea>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=6077+SW+Regional+Airport+Blvd%2C+No.+1%2C+Bentonville%2C+AR+72713&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=6077+SW+Regional+Airport+Blvd%2C+No.+1%2C+Bentonville%2C+AR+72713">Google</a></div>
+</div>
+<div class="office" data-onote="pts4:o:avonwood-home-re" data-onote-default="">
+  <div class="otop"><div><div class="oname">Avonwood Home RE </div><div class="oaddr">Bentonville, AR</div></div></div>
+  <div class="flag">Address not confirmed (Bentonville). Call before driving.</div>
+  <div class="agents">  <div class="agent" data-k="pts4:a:avonwood-home-re:jaclynn-vienola" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Jaclynn Vienola</span> <span class="ameta">#190 &middot; $3,151,150</span> <span class="wv ww3">W3</span></div>
+      <a class="call" href="tel:4798021560">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div>
+  <div class="agent" data-k="pts4:a:avonwood-home-re:susan-blalock" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Susan Blalock</span> <span class="ameta">#219 &middot; $2,776,300</span> <span class="wv ww3">W3</span></div>
+      <a class="call" href="tel:4798021560">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div></div>
+  <div class="flyers">3 flyers: 2 agent + 1 front desk &middot; +1 cookie</div>
+  <div class="ofnlabel">Front desk / office note:</div>
+  <textarea class="ofnote" placeholder="Front desk wrap..."></textarea>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=Bentonville%2C+AR&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=Bentonville%2C+AR">Google</a></div>
+</div>
+<div class="office" data-onote="pts4:o:weichert-realtors-the-griffin-company" data-onote-default="6/4 dropped flyers, front desk flat.">
+  <div class="otop"><div><div class="oname">Weichert REALTORS - The Griffin Company </div><div class="oaddr">3301 S Walton Blvd, Ste 1, Bentonville, AR 72712</div></div></div>
+  
+  <div class="agents">  <div class="agent" data-k="pts4:a:weichert-realtors-the-griffin-company:heather-campbell" data-done="1">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Heather Campbell</span> <span class="ameta">#7</span> <span class="wv ww1">W1</span></div>
+      <a class="call" href="tel:4793663026">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div></div>
+  <div class="flyers">2 flyers: 1 agent + 1 front desk &middot; +1 cookie</div>
+  <div class="ofnlabel">Front desk / office note:</div>
+  <textarea class="ofnote" placeholder="Front desk wrap..."></textarea>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=3301+S+Walton+Blvd%2C+Ste+1%2C+Bentonville%2C+AR+72712&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=3301+S+Walton+Blvd%2C+Ste+1%2C+Bentonville%2C+AR+72712">Google</a></div>
+</div>
+<div class="office" data-onote="pts4:o:fathom-realty" data-onote-default="">
+  <div class="otop"><div><div class="oname">Fathom Realty </div><div class="oaddr">609 SW 8th St, Ste 600, Bentonville, AR 72712</div></div></div>
+  
+  <div class="agents">  <div class="agent" data-k="pts4:a:fathom-realty:the-diaz-team" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">The Diaz Team</span> <span class="ameta">#38</span> <span class="wv ww1">W1</span></div>
+      <a class="call" href="tel:4794269107">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div></div>
+  <div class="flyers">2 flyers: 1 agent + 1 front desk &middot; +1 cookie</div>
+  <div class="ofnlabel">Front desk / office note:</div>
+  <textarea class="ofnote" placeholder="Front desk wrap..."></textarea>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=609+SW+8th+St%2C+Ste+600%2C+Bentonville%2C+AR+72712&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=609+SW+8th+St%2C+Ste+600%2C+Bentonville%2C+AR+72712">Google</a></div>
+</div>
+<div class="office" data-onote="pts4:o:real-broker-nwa" data-onote-default="">
+  <div class="otop"><div><div class="oname">Real Broker NWA </div><div class="oaddr">1202 McClain Rd, Bldg 7, Bentonville, AR 72712</div></div></div>
+  
+  <div class="agents">  <div class="agent" data-k="pts4:a:real-broker-nwa:anthony-mosley" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Anthony Mosley</span> <span class="ameta">#43</span> <span class="wv ww1">W1</span></div>
+      <a class="call" href="tel:4793197229">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div></div>
+  <div class="flyers">2 flyers: 1 agent + 1 front desk &middot; +1 cookie</div>
+  <div class="ofnlabel">Front desk / office note:</div>
+  <textarea class="ofnote" placeholder="Front desk wrap..."></textarea>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=1202+McClain+Rd%2C+Bldg+7%2C+Bentonville%2C+AR+72712&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=1202+McClain+Rd%2C+Bldg+7%2C+Bentonville%2C+AR+72712">Google</a></div>
+</div>
+<div class="office" data-onote="pts4:o:nwa-residential-re" data-onote-default="6/8 front desk will give it to Danielle.">
+  <div class="otop"><div><div class="oname">NWA Residential RE </div><div class="oaddr">1111 N Walton Blvd, Bentonville, AR 72712</div></div></div>
+  
+  <div class="agents">  <div class="agent" data-k="pts4:a:nwa-residential-re:danielle-hefley" data-done="1">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Danielle Hefley</span> <span class="ameta">#50 &middot; $9,879,936</span> <span class="wv ww2">W2</span></div>
+      <a class="call" href="tel:4795444779">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div></div>
+  <div class="flyers">2 flyers: 1 agent + 1 front desk &middot; +1 cookie</div>
+  <div class="ofnlabel">Front desk / office note:</div>
+  <textarea class="ofnote" placeholder="Front desk wrap..."></textarea>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=1111+N+Walton+Blvd%2C+Bentonville%2C+AR+72712&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=1111+N+Walton+Blvd%2C+Bentonville%2C+AR+72712">Google</a></div>
+</div>
+<div class="office" data-onote="pts4:o:century-21-lyons" data-onote-default="">
+  <div class="otop"><div><div class="oname">Century 21 Lyons </div><div class="oaddr">Bentonville, AR</div></div></div>
+  <div class="flag">Main office is Siloam Springs, not Bentonville. Confirm.</div>
+  <div class="agents">  <div class="agent" data-k="pts4:a:century-21-lyons:katie-rennard" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Katie Rennard</span> <span class="ameta">#162 &middot; $3,620,000</span> <span class="wv ww3">W3</span></div>
+      <a class="call" href="tel:4794644747">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div></div>
+  <div class="flyers">2 flyers: 1 agent + 1 front desk &middot; +1 cookie</div>
+  <div class="ofnlabel">Front desk / office note:</div>
+  <textarea class="ofnote" placeholder="Front desk wrap..."></textarea>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=Bentonville%2C+AR&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=Bentonville%2C+AR">Google</a></div>
+</div>
+<div class="office" data-onote="pts4:o:good-neighbor-realty" data-onote-default="">
+  <div class="otop"><div><div class="oname">Good Neighbor Realty </div><div class="oaddr">Bentonville, AR</div></div></div>
+  <div class="flag">No Bentonville office found (Tontitown/Springdale). Confirm.</div>
+  <div class="agents">  <div class="agent" data-k="pts4:a:good-neighbor-realty:joseph-duggar" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Joseph Duggar</span> <span class="ameta">#69 &middot; $7,170,799</span> <span class="wv ww3">W3</span></div>
+      <a class="call" href="tel:4793338099">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div></div>
+  <div class="flyers">2 flyers: 1 agent + 1 front desk &middot; +1 cookie</div>
+  <div class="ofnlabel">Front desk / office note:</div>
+  <textarea class="ofnote" placeholder="Front desk wrap..."></textarea>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=Bentonville%2C+AR&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=Bentonville%2C+AR">Google</a></div>
+</div>
+<div class="office" data-onote="pts4:o:kaci-johnson-re" data-onote-default="">
+  <div class="otop"><div><div class="oname">Kaci Johnson RE </div><div class="oaddr">Bentonville, AR</div></div></div>
+  <div class="flag">Agent at Realty Mart, Prairie Grove area. Confirm Bentonville address.</div>
+  <div class="agents">  <div class="agent" data-k="pts4:a:kaci-johnson-re:kaci-johnson" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Kaci Johnson</span> <span class="ameta">#186 &middot; $3,231,900</span> <span class="wv ww3">W3</span></div>
+      <a class="call" href="tel:4798992300">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div></div>
+  <div class="flyers">2 flyers: 1 agent + 1 front desk &middot; +1 cookie</div>
+  <div class="ofnlabel">Front desk / office note:</div>
+  <textarea class="ofnote" placeholder="Front desk wrap..."></textarea>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=Bentonville%2C+AR&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=Bentonville%2C+AR">Google</a></div>
+</div>
+<div class="office" data-onote="pts4:o:main-st-real-estate" data-onote-default="">
+  <div class="otop"><div><div class="oname">Main St Real Estate </div><div class="oaddr">Bentonville, AR</div></div></div>
+  <div class="flag">Address not confirmed. Confirm before driving.</div>
+  <div class="agents">  <div class="agent" data-k="pts4:a:main-st-real-estate:jason-dixon" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Jason Dixon</span> <span class="ameta">#176 &middot; $3,390,000</span> <span class="wv ww3">W3</span></div>
+      <a class="call" href="tel:4795539199">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div></div>
+  <div class="flyers">2 flyers: 1 agent + 1 front desk &middot; +1 cookie</div>
+  <div class="ofnlabel">Front desk / office note:</div>
+  <textarea class="ofnote" placeholder="Front desk wrap..."></textarea>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=Bentonville%2C+AR&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=Bentonville%2C+AR">Google</a></div>
+</div>
+<div class="office" data-onote="pts4:o:united-country-rateliff" data-onote-default="">
+  <div class="otop"><div><div class="oname">United Country Rateliff </div><div class="oaddr">Bentonville, AR</div></div></div>
+  <div class="flag">Address not confirmed (Bentonville). Confirm before driving.</div>
+  <div class="agents">  <div class="agent" data-k="pts4:a:united-country-rateliff:matthew-rateliff" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Matthew Rateliff</span> <span class="ameta">#244 &middot; $2,522,000</span> <span class="wv ww3">W3</span></div>
+      <a class="call" href="tel:4799341173">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div></div>
+  <div class="flyers">2 flyers: 1 agent + 1 front desk &middot; +1 cookie</div>
+  <div class="ofnlabel">Front desk / office note:</div>
+  <textarea class="ofnote" placeholder="Front desk wrap..."></textarea>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=Bentonville%2C+AR&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=Bentonville%2C+AR">Google</a></div>
+</div>
+<div class="sub">Rogers</div>
+<div class="office" data-onote="pts4:o:sudar-group" data-onote-default="6/8 wrong address.">
+  <div class="otop"><div><div class="oname">Sudar Group </div><div class="oaddr">5214 Village Parkway, Ste 201, Rogers, AR 72758</div></div></div>
+  <div class="flag">Sully reported this address was wrong on 6/8. Confirm.</div>
+  <div class="agents">  <div class="agent" data-k="pts4:a:sudar-group:lily-dighero" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Lily Dighero</span> <span class="ameta">#17 &middot; $28,715,875</span> <span class="wv ww3">W3</span></div>
+      <a class="call" href="tel:4797997842">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div>
+  <div class="agent" data-k="pts4:a:sudar-group:shannon-west" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Shannon West</span> <span class="ameta">#71 &middot; $7,162,400</span> <span class="wv ww2">W2</span></div>
+      <a class="call" href="tel:4792709518">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div>
+  <div class="agent" data-k="pts4:a:sudar-group:rhonda-porter" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Rhonda Porter</span> <span class="ameta">#98 &middot; $5,630,500</span> <span class="wv ww2">W2</span></div>
+      <a class="call" href="tel:4799572721">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div>
+  <div class="agent" data-k="pts4:a:sudar-group:madelyn-still" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Madelyn Still</span> <span class="ameta">#142 &middot; $4,051,770</span> <span class="wv ww3">W3</span></div>
+      <span class="nocall">no #</span>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div></div>
+  <div class="flyers">5 flyers: 4 agent + 1 front desk &middot; +1 cookie</div>
+  <div class="ofnlabel">Front desk / office note:</div>
+  <textarea class="ofnote" placeholder="Front desk wrap..."></textarea>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=5214+Village+Parkway%2C+Ste+201%2C+Rogers%2C+AR+72758&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=5214+Village+Parkway%2C+Ste+201%2C+Rogers%2C+AR+72758">Google</a></div>
+</div>
+<div class="office" data-onote="pts4:o:lindsey-associates" data-onote-default="">
+  <div class="otop"><div><div class="oname">Lindsey &amp; Associates </div><div class="oaddr">3801 W Walnut St, Rogers, AR 72756</div></div></div>
+  
+  <div class="agents">  <div class="agent" data-k="pts4:a:lindsey-associates:somer-adams" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Somer Adams</span> <span class="ameta">#25</span> <span class="wv ww1">W1</span></div>
+      <a class="call" href="tel:4796362200">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div>
+  <div class="agent" data-k="pts4:a:lindsey-associates:johnson-shapley-group" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Johnson Shapley Group</span> <span class="ameta">#28</span> <span class="wv ww1">W1</span></div>
+      <a class="call" href="tel:4796362200">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div>
+  <div class="agent" data-k="pts4:a:lindsey-associates:mandy-nickell" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Mandy Nickell</span> <span class="ameta">#41</span> <span class="wv ww1">W1</span></div>
+      <a class="call" href="tel:4793377629">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div></div>
+  <div class="flyers">4 flyers: 3 agent + 1 front desk &middot; +1 cookie</div>
+  <div class="ofnlabel">Front desk / office note:</div>
+  <textarea class="ofnote" placeholder="Front desk wrap..."></textarea>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=3801+W+Walnut+St%2C+Rogers%2C+AR+72756&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=3801+W+Walnut+St%2C+Rogers%2C+AR+72756">Google</a></div>
+</div>
+<div class="office" data-onote="pts4:o:uptown-real-estate" data-onote-default="6/8 could not find the office. Need to call an actual agent.">
+  <div class="otop"><div><div class="oname">Uptown Real Estate </div><div class="oaddr">4617 S 47th St, Rogers, AR 72758</div></div></div>
+  <div class="flag">Sully could not find the office 6/8. Call an agent first.</div>
+  <div class="agents">  <div class="agent" data-k="pts4:a:uptown-real-estate:brandi-mallard" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Brandi Mallard</span> <span class="ameta">#32 &middot; $16,297,498</span> <span class="wv ww2">W2</span></div>
+      <a class="call" href="tel:4797218599">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div>
+  <div class="agent" data-k="pts4:a:uptown-real-estate:kendra-madewell" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Kendra Madewell</span> <span class="ameta">#96 &middot; $5,658,917</span> <span class="wv ww2">W2</span></div>
+      <a class="call" href="tel:4798415413">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div>
+  <div class="agent" data-k="pts4:a:uptown-real-estate:angela-parker" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Angela Parker</span> <span class="ameta">#247 &middot; $2,478,000</span> <span class="wv ww3">W3</span></div>
+      <a class="call" href="tel:4793587999">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div></div>
+  <div class="flyers">4 flyers: 3 agent + 1 front desk &middot; +1 cookie</div>
+  <div class="ofnlabel">Front desk / office note:</div>
+  <textarea class="ofnote" placeholder="Front desk wrap..."></textarea>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=4617+S+47th+St%2C+Rogers%2C+AR+72758&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=4617+S+47th+St%2C+Rogers%2C+AR+72758">Google</a></div>
+</div>
+<div class="office" data-onote="pts4:o:bespoke-homes-nwa" data-onote-default="6/8 Jennifer not in, flyers + cookie to front desk.">
+  <div class="otop"><div><div class="oname">Bespoke Homes NWA </div><div class="oaddr">2090 W Pleasant Grove Rd, Rogers, AR 72758</div></div></div>
+  
+  <div class="agents">  <div class="agent" data-k="pts4:a:bespoke-homes-nwa:jennifer-hicks" data-done="1">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Jennifer Hicks</span> <span class="ameta">#80 &middot; $6,419,635</span> <span class="wv ww2">W2</span></div>
+      <a class="call" href="tel:4798664678">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div>
+  <div class="agent" data-k="pts4:a:bespoke-homes-nwa:jamie-smith" data-done="1">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Jamie Smith</span> <span class="ameta">#161 &middot; $3,623,000</span> <span class="wv ww3">W3</span></div>
+      <a class="call" href="tel:4795302626">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div></div>
+  <div class="flyers">3 flyers: 2 agent + 1 front desk &middot; +1 cookie</div>
+  <div class="ofnlabel">Front desk / office note:</div>
+  <textarea class="ofnote" placeholder="Front desk wrap..."></textarea>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=2090+W+Pleasant+Grove+Rd%2C+Rogers%2C+AR+72758&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=2090+W+Pleasant+Grove+Rd%2C+Rogers%2C+AR+72758">Google</a></div>
+</div>
+<div class="office" data-onote="pts4:o:exp-realty-nwa" data-onote-default="6/8 maybe a digital office.">
+  <div class="otop"><div><div class="oname">eXp Realty NWA </div><div class="oaddr">110 N 34th St, Rogers, AR 72756</div></div></div>
+  <div class="flag">Likely a digital/cloud office. Call first.</div>
+  <div class="agents">  <div class="agent" data-k="pts4:a:exp-realty-nwa:jose-esparza" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Jose Esparza</span> <span class="ameta">#83 &middot; $6,362,400</span> <span class="wv ww2">W2</span></div>
+      <a class="call" href="tel:4797218847">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div>
+  <div class="agent" data-k="pts4:a:exp-realty-nwa:soho-nwa" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Soho NWA</span> <span class="ameta">#117 &middot; $4,895,259</span> <span class="wv ww2">W2</span></div>
+      <a class="call" href="tel:4792000031">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div></div>
+  <div class="flyers">3 flyers: 2 agent + 1 front desk &middot; +1 cookie</div>
+  <div class="ofnlabel">Front desk / office note:</div>
+  <textarea class="ofnote" placeholder="Front desk wrap..."></textarea>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=110+N+34th+St%2C+Rogers%2C+AR+72756&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=110+N+34th+St%2C+Rogers%2C+AR+72756">Google</a></div>
+</div>
+<div class="office" data-onote="pts4:o:crye-leike-realtors-rogers" data-onote-default="6/4 front desk only, mild interest.">
+  <div class="otop"><div><div class="oname">Crye-Leike REALTORS Rogers </div><div class="oaddr">3003 W Walnut St, Rogers, AR 72756</div></div></div>
+  
+  <div class="agents">  <div class="agent" data-k="pts4:a:crye-leike-realtors-rogers:doug-gibson" data-done="1">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Doug Gibson</span> <span class="ameta">#9</span> <span class="wv ww1">W1</span></div>
+      <a class="call" href="tel:4798712334">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div></div>
+  <div class="flyers">2 flyers: 1 agent + 1 front desk &middot; +1 cookie</div>
+  <div class="ofnlabel">Front desk / office note:</div>
+  <textarea class="ofnote" placeholder="Front desk wrap..."></textarea>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=3003+W+Walnut+St%2C+Rogers%2C+AR+72756&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=3003+W+Walnut+St%2C+Rogers%2C+AR+72756">Google</a></div>
+</div>
+<div class="office" data-onote="pts4:o:limbird-real-estate-group-place" data-onote-default="6/4 team loved it. Heather is the boss.">
+  <div class="otop"><div><div class="oname">Limbird Real Estate Group / PLACE </div><div class="oaddr">5247 W Metro Park Crossing, Rogers, AR 72758</div></div></div>
+  
+  <div class="agents">  <div class="agent" data-k="pts4:a:limbird-real-estate-group-place:the-limbird-team" data-done="1">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">The Limbird Team</span> <span class="ameta">#4</span> <span class="wv ww1">W1</span></div>
+      <a class="call" href="tel:8557557653">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div></div>
+  <div class="flyers">2 flyers: 1 agent + 1 front desk &middot; +1 cookie</div>
+  <div class="ofnlabel">Front desk / office note:</div>
+  <textarea class="ofnote" placeholder="Front desk wrap..."></textarea>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=5247+W+Metro+Park+Crossing%2C+Rogers%2C+AR+72758&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=5247+W+Metro+Park+Crossing%2C+Rogers%2C+AR+72758">Google</a></div>
+</div>
+<div class="office" data-onote="pts4:o:curtis-realty-group" data-onote-default="6/4 nobody in, flyers under door. Shares space with a KW group.">
+  <div class="otop"><div><div class="oname">Curtis Realty Group </div><div class="oaddr">2225 S Bellview Rd, Ste 210, Rogers, AR 72758</div></div></div>
+  
+  <div class="agents">  <div class="agent" data-k="pts4:a:curtis-realty-group:curtis-realty-group" data-done="1">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Curtis Realty Group</span> <span class="ameta">#21</span> <span class="wv ww1">W1</span></div>
+      <a class="call" href="tel:4792503105">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div></div>
+  <div class="flyers">2 flyers: 1 agent + 1 front desk &middot; +1 cookie</div>
+  <div class="ofnlabel">Front desk / office note:</div>
+  <textarea class="ofnote" placeholder="Front desk wrap..."></textarea>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=2225+S+Bellview+Rd%2C+Ste+210%2C+Rogers%2C+AR+72758&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=2225+S+Bellview+Rd%2C+Ste+210%2C+Rogers%2C+AR+72758">Google</a></div>
+</div>
+<div class="office" data-onote="pts4:o:coldwell-banker-hmf-rogers" data-onote-default="">
+  <div class="otop"><div><div class="oname">Coldwell Banker HMF Rogers </div><div class="oaddr">809 S 52nd St, Rogers, AR 72758</div></div></div>
+  
+  <div class="agents">  <div class="agent" data-k="pts4:a:coldwell-banker-hmf-rogers:meza-harris-aricka-finger-team" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Meza Harris &amp; Aricka Finger Team</span> <span class="ameta">#10</span> <span class="wv ww1">W1</span></div>
+      <a class="call" href="tel:4796960600">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div></div>
+  <div class="flyers">2 flyers: 1 agent + 1 front desk &middot; +1 cookie</div>
+  <div class="ofnlabel">Front desk / office note:</div>
+  <textarea class="ofnote" placeholder="Front desk wrap..."></textarea>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=809+S+52nd+St%2C+Rogers%2C+AR+72758&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=809+S+52nd+St%2C+Rogers%2C+AR+72758">Google</a></div>
+</div>
+<div class="office" data-onote="pts4:o:portfolio-sotheby-s-international-realty" data-onote-default="6/4 met Dee, interested, the Chani mention landed.">
+  <div class="otop"><div><div class="oname">Portfolio Sotheby&#x27;s International Realty </div><div class="oaddr">3712 S Pinnacle Hills Pkwy, Ste 101, Rogers, AR 72758</div></div></div>
+  
+  <div class="agents">  <div class="agent" data-k="pts4:a:portfolio-sotheby-s-international-realty:dee-rodes" data-done="1">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Dee Rodes</span> <span class="ameta">#40</span> <span class="wv ww1">W1</span></div>
+      <a class="call" href="tel:4799366073">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div></div>
+  <div class="flyers">2 flyers: 1 agent + 1 front desk &middot; +1 cookie</div>
+  <div class="ofnlabel">Front desk / office note:</div>
+  <textarea class="ofnote" placeholder="Front desk wrap..."></textarea>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=3712+S+Pinnacle+Hills+Pkwy%2C+Ste+101%2C+Rogers%2C+AR+72758&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=3712+S+Pinnacle+Hills+Pkwy%2C+Ste+101%2C+Rogers%2C+AR+72758">Google</a></div>
+</div>
+<div class="sub">Other (Bella Vista)</div>
+<div class="office" data-onote="pts4:o:acorn-realty" data-onote-default="">
+  <div class="otop"><div><div class="oname">Acorn Realty </div><div class="oaddr">432 Town Ctr NE, Bella Vista, AR 72714</div></div></div>
+  
+  <div class="agents">  <div class="agent" data-k="pts4:a:acorn-realty:julie-hull" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Julie Hull</span> <span class="ameta">#111 &middot; $5,094,700</span> <span class="wv ww3">W3</span></div>
+      <a class="call" href="tel:4795759663">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div></div>
+  <div class="flyers">2 flyers: 1 agent + 1 front desk &middot; +1 cookie</div>
+  <div class="ofnlabel">Front desk / office note:</div>
+  <textarea class="ofnote" placeholder="Front desk wrap..."></textarea>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=432+Town+Ctr+NE%2C+Bella+Vista%2C+AR+72714&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=432+Town+Ctr+NE%2C+Bella+Vista%2C+AR+72714">Google</a></div>
+</div>
+<div class="sub">Other (Fayetteville)</div>
+<div class="office" data-onote="pts4:o:re-max-associates-moldenhauer-group" data-onote-default="">
+  <div class="otop"><div><div class="oname">RE/MAX Associates (Moldenhauer Group) </div><div class="oaddr">4102 N Mall Ave, Ste 201, Fayetteville, AR 72703</div></div></div>
+  
+  <div class="agents">  <div class="agent" data-k="pts4:a:re-max-associates-moldenhauer-group:the-moldenhauer-group" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">The Moldenhauer Group</span> <span class="ameta">#41</span> <span class="wv ww1">W1</span></div>
+      <a class="call" href="tel:4793416413">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div></div>
+  <div class="flyers">2 flyers: 1 agent + 1 front desk &middot; +1 cookie</div>
+  <div class="ofnlabel">Front desk / office note:</div>
+  <textarea class="ofnote" placeholder="Front desk wrap..."></textarea>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=4102+N+Mall+Ave%2C+Ste+201%2C+Fayetteville%2C+AR+72703&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=4102+N+Mall+Ave%2C+Ste+201%2C+Fayetteville%2C+AR+72703">Google</a></div>
+</div>
+<div class="office" data-onote="pts4:o:coldwell-banker-hmf-fayetteville" data-onote-default="">
+  <div class="otop"><div><div class="oname">Coldwell Banker HMF Fayetteville </div><div class="oaddr">3589 N College Ave, Fayetteville, AR 72703</div></div></div>
+  
+  <div class="agents">  <div class="agent" data-k="pts4:a:coldwell-banker-hmf-fayetteville:sean-morris" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Sean Morris</span> <span class="ameta">#35</span> <span class="wv ww1">W1</span></div>
+      <a class="call" href="tel:4795210220">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div></div>
+  <div class="flyers">2 flyers: 1 agent + 1 front desk &middot; +1 cookie</div>
+  <div class="ofnlabel">Front desk / office note:</div>
+  <textarea class="ofnote" placeholder="Front desk wrap..."></textarea>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=3589+N+College+Ave%2C+Fayetteville%2C+AR+72703&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=3589+N+College+Ave%2C+Fayetteville%2C+AR+72703">Google</a></div>
+</div>
+<div class="sub">Other (Gentry)</div>
+<div class="office" data-onote="pts4:o:crye-leike-gentry" data-onote-default="6/8 met Jennifer Welch, very interested. Referred Dianna Crook (EXIT Harper Carlton). HOT.">
+  <div class="otop"><div><div class="oname">Crye-Leike Gentry </div><div class="oaddr">217 S Gentry Blvd, Gentry, AR 72734</div></div></div>
+  
+  <div class="agents">  <div class="agent" data-k="pts4:a:crye-leike-gentry:jennifer-welch" data-done="1">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Jennifer Welch</span> <span class="ameta">#114 &middot; $5,012,000</span> <span class="wv ww2">W2</span></div>
+      <a class="call" href="tel:4795999292">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div>
+  <div class="agent" data-k="pts4:a:crye-leike-gentry:delton-williams" data-done="1">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Delton Williams</span> <span class="ameta">#115 &middot; $4,912,275</span> <span class="wv ww2">W2</span></div>
+      <a class="call" href="tel:4794275623">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div></div>
+  <div class="flyers">3 flyers: 2 agent + 1 front desk &middot; +1 cookie</div>
+  <div class="ofnlabel">Front desk / office note:</div>
+  <textarea class="ofnote" placeholder="Front desk wrap..."></textarea>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=217+S+Gentry+Blvd%2C+Gentry%2C+AR+72734&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=217+S+Gentry+Blvd%2C+Gentry%2C+AR+72734">Google</a></div>
+</div>
+<div class="sub">Other (Lowell)</div>
+<div class="office" data-onote="pts4:o:gibson-real-estate" data-onote-default="6/4 met David Williams, co-owner. Team talk booked June 11, 10am.">
+  <div class="otop"><div><div class="oname">Gibson Real Estate </div><div class="oaddr">106 Parkwood St, Ste A, Lowell, AR 72745</div></div></div>
+  
+  <div class="agents">  <div class="agent" data-k="pts4:a:gibson-real-estate:jared-smith" data-done="1">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Jared Smith</span> <span class="ameta">#24</span> <span class="wv ww1">W1</span></div>
+      <a class="call" href="tel:4793724705">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div></div>
+  <div class="flyers">2 flyers: 1 agent + 1 front desk &middot; +1 cookie</div>
+  <div class="ofnlabel">Front desk / office note:</div>
+  <textarea class="ofnote" placeholder="Front desk wrap..."></textarea>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=106+Parkwood+St%2C+Ste+A%2C+Lowell%2C+AR+72745&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=106+Parkwood+St%2C+Ste+A%2C+Lowell%2C+AR+72745">Google</a></div>
+</div>
+<div class="sub">Other (Springdale)</div>
+<div class="office" data-onote="pts4:o:crawford-real-estate-and-associates" data-onote-default="">
+  <div class="otop"><div><div class="oname">Crawford Real Estate and Associates </div><div class="oaddr">241 S Elm Springs Rd, Springdale, AR 72762</div></div></div>
+  
+  <div class="agents">  <div class="agent" data-k="pts4:a:crawford-real-estate-and-associates:toby-crawford" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Toby Crawford</span> <span class="ameta">#19</span> <span class="wv ww1">W1</span></div>
+      <a class="call" href="tel:4793819898">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div></div>
+  <div class="flyers">2 flyers: 1 agent + 1 front desk &middot; +1 cookie</div>
+  <div class="ofnlabel">Front desk / office note:</div>
+  <textarea class="ofnote" placeholder="Front desk wrap..."></textarea>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=241+S+Elm+Springs+Rd%2C+Springdale%2C+AR+72762&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=241+S+Elm+Springs+Rd%2C+Springdale%2C+AR+72762">Google</a></div>
+</div>
+<div class="office" data-onote="pts4:o:elevation-real-estate-and-management" data-onote-default="">
+  <div class="otop"><div><div class="oname">Elevation Real Estate and Management </div><div class="oaddr">4024 Wagon Wheel Rd, Springdale, AR 72762</div></div></div>
+  
+  <div class="agents">  <div class="agent" data-k="pts4:a:elevation-real-estate-and-management:leah-childress" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Leah Childress</span> <span class="ameta">#16</span> <span class="wv ww1">W1</span></div>
+      <a class="call" href="tel:4797158045">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div></div>
+  <div class="flyers">2 flyers: 1 agent + 1 front desk &middot; +1 cookie</div>
+  <div class="ofnlabel">Front desk / office note:</div>
+  <textarea class="ofnote" placeholder="Front desk wrap..."></textarea>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=4024+Wagon+Wheel+Rd%2C+Springdale%2C+AR+72762&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=4024+Wagon+Wheel+Rd%2C+Springdale%2C+AR+72762">Google</a></div>
+</div>
+<div class="office" data-onote="pts4:o:equity-partners-realty" data-onote-default="">
+  <div class="otop"><div><div class="oname">Equity Partners Realty </div><div class="oaddr">3291 S Thompson St, Ste G102, Springdale, AR 72764</div></div></div>
+  
+  <div class="agents">  <div class="agent" data-k="pts4:a:equity-partners-realty:taylor-baker" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Taylor Baker</span> <span class="ameta">#205 &middot; $2,882,574</span> <span class="wv ww3">W3</span></div>
+      <a class="call" href="tel:4795304752">Call</a>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div></div>
+  <div class="flyers">2 flyers: 1 agent + 1 front desk &middot; +1 cookie</div>
+  <div class="ofnlabel">Front desk / office note:</div>
+  <textarea class="ofnote" placeholder="Front desk wrap..."></textarea>
+  <div class="actions"><a class="nav" href="https://maps.apple.com/?daddr=3291+S+Thompson+St%2C+Ste+G102%2C+Springdale%2C+AR+72764&dirflg=d">&#63743; Apple Maps</a><a class="nav alt" href="https://www.google.com/maps/dir/?api=1&destination=3291+S+Thompson+St%2C+Ste+G102%2C+Springdale%2C+AR+72764">Google</a></div>
+</div>
+<div class="sub">Address needed</div>
+<div class="office" data-onote="pts4:o:exit-realty-harper-carlton" data-onote-default="">
+  <div class="otop"><div><div class="oname">EXIT Realty Harper Carlton </div><div class="oaddr">address needed</div></div></div>
+  
+  <div class="agents">  <div class="agent" data-k="pts4:a:exit-realty-harper-carlton:dianna-crook" data-done="0">
+    <div class="arow">
+      <label class="adone"><input type="checkbox"></label>
+      <div class="awho"><span class="aname">Dianna Crook</span> <span class="ameta"></span> <span class="wv wref">Ref</span></div>
+      <span class="nocall">no #</span>
+      <button class="ntoggle" type="button">Notes</button>
+    </div>
+    <textarea class="anote" placeholder="Notes on this agent..."></textarea>
+  </div></div>
+  <div class="flyers">2 flyers: 1 agent + 1 front desk &middot; +1 cookie</div>
+  <div class="ofnlabel">Front desk / office note:</div>
+  <textarea class="ofnote" placeholder="Front desk wrap..."></textarea>
+  
+</div>
 <button class="copybtn" id="copylog">Copy full field log</button>
-
-<div class="footer">
-  <strong>At every office:</strong> warm cookies to the front desk, ask them to share PTS with the office, get their name. One flyer per agent listed plus one for the desk.<br><br>
-  <strong>If an agent is in:</strong> no script, the flyer drives it. If not, leave it and move.<br><br>
-  Prepared To Sell &middot; (479) 519-8444 &middot; preparedtosellnwa.com
-</div>
-
+<div class="footer"><strong>Per office:</strong> cookie + flyer to the front desk, get their name, log it in the office note. One flyer per agent. Tap Done on each agent you deliver to or meet, and use that agent's Notes for what happened.<br><br>Prepared To Sell &middot; (479) 519-8444 &middot; preparedtosellnwa.com</div>
 <script>
-  var stops = document.querySelectorAll('.stop');
-  stops.forEach(function(s, i){
-    var cb = s.querySelector('.done input');
-    var ta = s.querySelector('.fieldnote');
-    var k = 'pts_v3_'+i;
-    try {
-      var saved = localStorage.getItem(k);
-      if (saved !== null) { var d = JSON.parse(saved); cb.checked = !!d.done; if (d.note !== undefined) ta.value = d.note; }
-      function save(){ localStorage.setItem(k, JSON.stringify({done: cb.checked, note: ta.value})); }
-      cb.addEventListener('change', save); ta.addEventListener('input', save);
-    } catch(e){}
+function load(){
+  document.querySelectorAll('.agent').forEach(function(a){
+    var k=a.getAttribute('data-k'), cb=a.querySelector('.adone input'), ta=a.querySelector('.anote');
+    try{var s=localStorage.getItem(k);
+      if(s!==null){var d=JSON.parse(s);cb.checked=!!d.done;if(d.note)ta.value=d.note;}
+      else if(a.getAttribute('data-done')==='1'){cb.checked=true;save(a);}
+    }catch(e){}
+    if(cb.checked)a.classList.add('done');
+    function save(){try{localStorage.setItem(k,JSON.stringify({done:cb.checked,note:ta.value}));}catch(e){}}
+    cb.addEventListener('change',function(){a.classList.toggle('done',cb.checked);save();});
+    ta.addEventListener('input',save);
+    a.querySelector('.ntoggle').addEventListener('click',function(){ta.classList.toggle('show');ta.focus();});
   });
-  document.getElementById('copylog').addEventListener('click', function(){
-    var lines = ['PTS Outreach Field Log'];
-    stops.forEach(function(s){
-      var name = s.querySelector('.office').textContent.trim();
-      var done = s.querySelector('.done input').checked ? 'DONE' : 'not yet';
-      var note = s.querySelector('.fieldnote').value.trim();
-      lines.push('- ' + name + ' [' + done + ']' + (note ? ': ' + note : ''));
+  document.querySelectorAll('.office').forEach(function(o){
+    var k=o.getAttribute('data-onote'), ta=o.querySelector('.ofnote'), def=o.getAttribute('data-onote-default')||'';
+    try{var s=localStorage.getItem(k);
+      if(s!==null)ta.value=s; else if(def){ta.value=def;localStorage.setItem(k,def);}
+    }catch(e){}
+    ta.addEventListener('input',function(){try{localStorage.setItem(k,ta.value);}catch(e){}});
+  });
+}
+load();
+document.getElementById('copylog').addEventListener('click',function(){
+  var lines=['PTS Outreach Field Log'];
+  document.querySelectorAll('.office').forEach(function(o){
+    var name=o.querySelector('.oname').textContent.replace('TODAY','').trim();
+    lines.push('\n== '+name+' ==');
+    var onote=o.querySelector('.ofnote').value.trim(); if(onote)lines.push('  [front desk] '+onote);
+    o.querySelectorAll('.agent').forEach(function(a){
+      var nm=a.querySelector('.aname').textContent.trim();
+      var done=a.querySelector('.adone input').checked?'DONE':'-';
+      var nt=a.querySelector('.anote').value.trim();
+      lines.push('  ['+done+'] '+nm+(nt?': '+nt:''));
     });
-    var txt = lines.join('\n');
-    if (navigator.clipboard) { navigator.clipboard.writeText(txt).then(function(){ alert('Field log copied. Paste it anywhere.'); }); }
-    else { prompt('Copy this:', txt); }
   });
-</script>
-</body>
-</html>
+  var txt=lines.join('\n');
+  if(navigator.clipboard){navigator.clipboard.writeText(txt).then(function(){alert('Field log copied.');});}
+  else{prompt('Copy:',txt);}
+});
+</script></body></html>
